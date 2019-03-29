@@ -1,0 +1,133 @@
+@mixin Landing---Main-title---table {
+    font-family: Merriweather;
+    font-size: rem(24);
+    font-weight: 900;
+    text-align: center;
+    color: $color-secundary;
+  }
+  
+  @mixin Landing---Main-title---mobile {
+    font-family: Merriweather;
+    font-size: rem(19);
+    font-weight: 900;
+    text-align: center;
+    color: $color-secundary;
+  }
+  
+  @mixin Card---Name {
+    font-family: Montserrat;
+    font-size: rem(18);
+    font-weight: bold;
+    line-height: 1.11;
+    color: $color-primary;
+  }
+  
+  @mixin Card-creator---BTN {
+    font-family: OpenSans;
+    font-size: rem(18);
+    font-weight: 600;
+    color: $color-white;
+  }
+  
+  @mixin Collapsible---label {
+    font-family: OpenSans;
+    font-size: rem(18);
+    font-weight: 600;
+    color: $color-grey;
+  }
+  
+  @mixin Landing---Main-CTA {
+    font-family: OpenSans;
+    font-size: rem(16);
+    font-weight: 600;
+    text-align: center;
+    color: $color-white;
+  }
+  
+  @mixin Card---role {
+    font-family: Montserrat;
+    font-size: rem(16);
+    line-height: 1.25;
+    color: $color-grey;
+  }
+  
+  @mixin Landing---Main-text---tablet {
+    font-family: OpenSans;
+    font-size: rem(16);
+    text-align: center;
+    color: $color-primary;
+  }
+  
+  @mixin Landing---ico-label---tablet {
+    font-family: OpenSans;
+    font-size: rem(16);
+    text-align: center;
+    color: $color-grey;
+  }
+  
+  @mixin Collapsible-section---title {
+    font-family: OpenSans;
+    font-size: rem(14);
+    color: $color-grey;
+  }
+  
+  @mixin Footer---Copy {
+    font-family: OpenSans;
+    font-size: rem(14);
+    line-height: 1.43;
+    color: #6b6b6b;
+  }
+  
+  label {
+    font-family: OpenSans;
+    font-size: rem(14);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: $color-primary;
+  }
+  
+  @mixin Placeholder {
+    font-family: OpenSans;
+    font-size: rem(14);
+    line-height: 1.43;
+    color: #c5c5c5;
+  }
+  
+  @mixin Upload-button {
+    font-family: OpenSans;
+    font-size: rem(14);
+    line-height: 1.43;
+    color: $color-white;
+  }
+  
+  @mixin landign---icon-label {
+    font-family: OpenSans;
+    font-size: rem(13);
+    text-align: center;
+    color: $color-grey;
+  }
+  
+  @mixin Landing---Main-text---mobile {
+    font-family: OpenSans;
+    font-size: rem(13);
+    text-align: center;
+    color: $color-primary;
+  }
+  
+  @mixin Response-url {
+    font-family: OpenSans;
+    font-size: rem(12);
+    font-weight: 600;
+    text-align: center;
+    color: $color-secundary;
+  }
+  
+  @mixin Card---reset {
+    font-family: OpenSans;
+    font-size: rem(12);
+    line-height: 1.67;
+    color: $color-grey;
+  }
