@@ -1,0 +1,100 @@
+.landing__page {
+    background-color: $color-background-light;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing__img-container {
+    width: rem(250);
+
+    @media all and (min-width: 768px) {
+        width: rem(419);
+    }
+}
+
+.landing__img {
+    width: 100%;
+}
+
+.landing__title-container {
+    max-width: rem(320);
+
+
+}
+
+.landing__title {
+    @include Landing---Main-title---mobile;
+    margin: rem(35) 0 0;
+    
+    @media all and (min-width: 768px) {
+        @include Landing---Main-title---table;
+    }
+}
+
+.landing__subtitle {
+    @include Landing---Main-text---mobile;
+    margin: 0;
+
+    @media all and (min-width: 768px) {
+        @include Landing---Main-text---tablet;
+    }
+}
+
+.icons__list {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.landing__icons {
+    border: 2px solid rgba($color: $color-secundary, $alpha: 0.21);
+    width: rem(268);
+    height: rem(74);
+    display: flex;
+    align-content: center;
+    margin: rem(17) 0 rem(39);
+
+    @media all and (min-width:768px) {
+        margin: rem(25) 0 rem(186);
+        width: rem(325);
+        height: rem(86);
+    }
+}
+.icons__list--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: rem(60);
+}
+
+.icons__item {
+    font-size: rem(22);
+    color: $color-secundary;
+    opacity: 1;
+}
+
+.landing__button {
+    height: rem(42);
+    width: rem(129);
+    border-radius: rem(21);
+    background-color: $color-tertiary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.landing__button--link {
+    text-decoration: none;
+    text-transform: uppercase;
+    @include Landing---Main-CTA;
+}
+
+
