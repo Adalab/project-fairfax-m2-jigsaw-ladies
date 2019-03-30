@@ -85,9 +85,6 @@
     width: rem(129);
     border-radius: rem(21);
     background-color: $color-tertiary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 
@@ -95,6 +92,11 @@
     text-decoration: none;
     text-transform: uppercase;
     @include Landing---Main-CTA;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
