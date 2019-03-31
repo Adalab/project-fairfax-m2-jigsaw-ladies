@@ -1,0 +1,53 @@
+.btn-reset {
+    width: rem(75);
+    height: rem(30);
+    border: solid rem(1) $color-white;
+    border-radius: rem(15);
+    color: $color-grey;
+    font-size: rem(12);
+    text-transform: uppercase; 
+    margin:0;
+}
+
+.far {
+    color: $color-grey; 
+    font-size: rem(12);
+}
+
+.photo_container {
+    background: $color-white;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.preview_title {
+    font-size: rem(18);
+    color: $color-primary;
+}  
+
+.preview_subtitle {
+    font-size: rem(16);
+    color: $color-grey;
+}
+
+.list_rs {
+    padding-left: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    font-size: rem(18);
+    color: $color-primary;
+}
+
+.rs_element {
+    background: $color-white;
+    width: rem(32);
+    height: rem(32);
+    line-height: rem(32);
+    border: solid 2px $color-green;
+    margin-right: rem(10);
+    border-radius: rem(25);
+}
