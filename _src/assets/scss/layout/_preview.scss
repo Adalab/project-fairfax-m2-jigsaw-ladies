@@ -14,23 +14,23 @@
     font-size: rem(12);
 }
 
-.photo_container {
+.photo__container {
     background: $color-white;
     font-family: "Montserrat";
     text-align: center;
 }
 
-.preview_title {
+.preview__title {
     font-size: rem(18);
     color: $color-primary;
 }  
 
-.preview_subtitle {
+.preview__subtitle {
     font-size: rem(16);
     color: $color-grey;
 }
 
-.list_rs {
+.list__rs {
     padding-left: 0;
     display:flex;
     align-items: center;
@@ -42,7 +42,8 @@
     color: $color-primary;
 }
 
-.rs_element {
+.rs__element {
+    display: inline-block;
     background: $color-white;
     width: rem(32);
     height: rem(32);
