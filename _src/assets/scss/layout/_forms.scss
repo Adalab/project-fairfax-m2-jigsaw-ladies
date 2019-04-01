@@ -19,12 +19,12 @@
 }
 
 .icon__collapsible {
-    margin: 0.83rem;
+    margin: 1rem;
     @include orange--icon---collapsible;
 }
 
 .arrow__collapsible {
-    margin: 0.83rem;
+    margin: 1rem;
     @include arrow---collapsible;
 }
 
@@ -35,13 +35,16 @@
 }
 
 .collapsible__title {
-    @include Collapsible---label;
+    @include Collapsible-section---title;
 }
 
 .title__color__container , .form__color__container {
     flex-grow: 1;
 }
 
+.color__title {
+    @include Collapsible---label;
+}
 .palettes {
     display: flex;
     flex-direction: column;
