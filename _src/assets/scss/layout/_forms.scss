@@ -1,9 +1,15 @@
-.design__container , .design__main__container {
+.form__collapsible , .design__main__container {
     max-width: 90%;
     margin: 0 auto;
-    background: cyan;
 }
 
+.form__collapsible {
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.design__container {
+    margin-top: 1rem;
+}
 .design__title__container , .design__main__container {
     display: flex;
     background: white;
@@ -16,6 +22,7 @@
 .first__title {
     flex-grow: 2;
     display: flex;
+    align-items: center;
 }
 
 .icon__collapsible {
