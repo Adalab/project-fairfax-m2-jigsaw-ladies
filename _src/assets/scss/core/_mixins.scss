@@ -78,13 +78,8 @@
     color: #6b6b6b;
   }
   
-<<<<<<< HEAD
   @mixin Label {
-    font-family: OpenSans;
-=======
-  label {
     font-family: 'Open Sans', sans-serif;
->>>>>>> f75464f23ce7b13c65b7bd31593b546a693dc95d
     font-size: rem(14);
     line-height: 1.43;
     color: $color-primary;
