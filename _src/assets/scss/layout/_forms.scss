@@ -1,70 +1,80 @@
-.design_container , .design_main_container {
-    max-width: 95%;
+.form__collapsible , .design__main__container {
+    max-width: 90%;
     margin: 0 auto;
-    background: cyan;
 }
 
-.design_title_container , .design_main_container {
+.form__collapsible {
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.design__container {
+    margin-top: 1rem;
+}
+.design__title__container , .design__main__container {
     display: flex;
     background: white;
 }
 
-.first_title {
+.design__title__container {
+    align-items: center;
+}
+
+.first__title {
     flex-grow: 2;
     display: flex;
+    align-items: center;
 }
 
-.icon_collapsible {
-    margin: 0.83rem;
+.icon__collapsible {
+    margin: 1rem;
+    @include orange--icon---collapsible;
 }
 
-.second_title {
+.arrow__collapsible {
+    margin: 1rem;
+    @include arrow---collapsible;
+}
+
+.second__title {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
 }
 
-.design_title {
-    @include Collapsible---label;
+.collapsible__title {
+    @include Collapsible-section---title;
 }
 
-.title_color_container , .form_color_container {
+.title__color__container , .form__color__container {
     flex-grow: 1;
 }
 
-.label_hidden {
-    display: flex;
-    align-items: center;
+.color__title {
+    @include Collapsible---label;
 }
-
 .palettes {
     display: flex;
     flex-direction: column;
     padding: 1rem 0;
 }
 
-.palette_contaier {
+.theme {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.theme__color {
+    width: 30px;
+    height: 0;
+    overflow:hidden;
+    padding-top: 30px;
+}
+  
+.palettes__label {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    margin-bottom: rem(10);
-}
-
-.palette {
-    margin-left: rem(10);
-    width: 90px;
-    height: 25px;
-}
-
-.color_palette_1 {
-    background: green;
-}
-
-.color_palette_2 {
-    background: darkred;
-}
-
-.color_palette_3 {
-    background: grey;
+    margin-bottom: 20px;
 }
 

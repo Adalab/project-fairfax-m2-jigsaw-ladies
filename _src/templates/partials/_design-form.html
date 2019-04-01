@@ -1,45 +1,56 @@
-<div class="design_container">
-    <div class="design_title_container">
-        <div class="first_title">
-            <i class="far fa-object-ungroup icon_collapsible"></i>
-            <h2 class="design_title">Diseña</h2>
+<div class="design__container form__collapsible">
+    <div class="design__title__container">
+        <div class="first__title">
+            <i class="far fa-object-ungroup icon__collapsible"></i>
+            <h2 class="collapsible__title">Diseña</h2>
         </div>
-        <div class="second_title">
-            <i class="fas fa-chevron-down icon_collapsible"></i>
+        <div class="second__title">
+            <i class="fas fa-chevron-down arrow__collapsible"></i>
         </div>
     </div>
-    <div class="design_main_container">
-        <div class="title_color_container">
-            <p class="color_title">Colores</p>
+    <div class="design__main__container">
+        <div class="title__color__container">
+            <p class="color__title">Colores</p>
         </div>
+
         <div class="palettes">
-            <div class="palette_1_container palette_contaier">
-                <div class="form_color_container">
-                    <label class="label_hidden" for="palette_1">
-                        <input id="palette_1" type="radio" value="palette_1"              name="palettes"
-                        />
-                    <div class="color_palette_1 palette"></div>
-                    </label>
-                </div>
-            </div>
-            <div class="palette_2_container palette_contaier">
-                <div class="form_color_container">
-                    <label class="label_hidden" for="palette_2">
-                        <input id="palette_2" type="radio" value="palette_2"              name="palettes"
-                        />
-                    <div class="color_palette_2 palette"></div>
-                    </label>
-                </div>
-            </div>
-            <div class="palette_3_container palette_contaier">
-                <div class="form_color_container">
-                    <label class="label_hidden" for="palette_2">
-                        <input id="palette_3" type="radio" value="palette_3"              name="palettes"
-                        />
-                    <div class="color_palette_3 palette"></div>
-                    </label>
-                </div>
-            </div>
+            <label class="palettes__label" for="color1">
+                <input type="radio" id="color1" name="color">
+                <ul class="theme">
+                    <li class="theme__color" style="background-color:#114e4e">114e4e</li>
+                    <li class="theme__color" style="background-color:#438792">438792</li>
+                    <li class="theme__color" style="background-color:#a2deaf">a2deaf</li>
+                </ul>
+            </label>
+
+            <label class="palettes__label" for="color2">
+                <input type="radio" id="color2" name="color">
+                <ul class="theme">
+                    <li class="theme__color" style="background-color:#420101">420101</li>
+                    <li class="theme__color" style="background-color:#bd1010">bd1010</li>
+                    <li class="theme__color" style="background-color:#e95626">e95626</li>
+                </ul>
+            </label>
+
+            <label class="palettes__label" for="color3">
+                <input type="radio" id="color3" name="color">
+                <ul class="theme">
+                    <li class="theme__color" style="background-color:#3e5b65">3e5b65</li>
+                    <li class="theme__color" style="background-color:#dfe5eb">dfe5eb</li>
+                    <li class="theme__color" style="background-color:#a0c0cf">a0c0cf</li>
+                </ul>
+            </label>
+        </div>
+    </div>
+</div>
+<div class="fill__container form__collapsible">
+    <div class="design__title__container">
+        <div class="first__title">
+            <i class="far fa-keyboard icon__collapsible"></i>
+            <h2 class="collapsible__title">Rellena</h2>
+        </div>
+        <div class="second__title">
+            <i class="fas fa-chevron-down arrow__collapsible"></i>
         </div>
     </div>
 </div>
