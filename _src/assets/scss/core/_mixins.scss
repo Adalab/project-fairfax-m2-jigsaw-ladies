@@ -131,3 +131,13 @@
     line-height: 1.67;
     color: $color-grey;
   }
+
+  @mixin orange--icon---collapsible {
+    font-size: 1.125rem;
+    color: $color-secundary;
+  }
+
+  @mixin arrow---collapsible {
+    font-size: 1.125rem;
+    color: $color-grey;
+  }

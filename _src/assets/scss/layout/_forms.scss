@@ -9,6 +9,10 @@
     background: white;
 }
 
+.design__title__container {
+    align-items: center;
+}
+
 .first__title {
     flex-grow: 2;
     display: flex;
@@ -16,6 +20,12 @@
 
 .icon__collapsible {
     margin: 0.83rem;
+    @include orange--icon---collapsible;
+}
+
+.arrow__collapsible {
+    margin: 0.83rem;
+    @include arrow---collapsible;
 }
 
 .second__title {
@@ -24,7 +34,7 @@
     justify-content: flex-end;
 }
 
-.design__title {
+.collapsible__title {
     @include Collapsible---label;
 }
 
