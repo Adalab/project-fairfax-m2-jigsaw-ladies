@@ -43,11 +43,13 @@
 }
 
 .rs__element {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     background: $color-white;
     width: rem(32);
     height: rem(32);
-    line-height: rem(32);
     border: solid 2px $color-green;
     margin-right: rem(10);
     border-radius: rem(25);
