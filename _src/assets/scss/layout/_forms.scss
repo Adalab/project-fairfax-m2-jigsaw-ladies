@@ -88,6 +88,10 @@
     @include Input;
 }
 
+.fill__main__container {
+    margin-bottom: rem(30);
+}
+
 .thumbnail__image {
     width: rem(30);
     height: rem(30);
@@ -95,6 +99,32 @@
 }
 
 .thumbnail__container {
+    display: flex;   
+}
+
+/*Share form*/
+.share__container {
+    margin-bottom: rem(30);
+}
+
+.container__button {
     display: flex;
-    
+    justify-content: center;
+}
+.share__button {
+    border-radius: rem(12);
+    padding: rem(13);
+    background: $color-secundary;
+    font-family: $fontFamilyPrimary;
+    font-size: rem(18);
+    text-transform: uppercase;
+    color: $color-white;
+    font-weight: 600;
+    margin: rem(30) 0;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    border-style: none;
+}
+
+.share__icon {
+    margin-right: rem(5);
 }
