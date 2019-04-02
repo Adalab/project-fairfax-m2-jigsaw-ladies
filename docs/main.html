@@ -16,39 +16,10 @@
     
     <body>
         <div class="page">
+            <header class="header">
+                <img src="assets/images/awesome-logo.svg" alt="page logo" class="header__logo">
+            </header>
             <main class="main__container">
-                <section class="main__preview">
-                    <div class="preview__wrapper">
-                        <button class="btn__reset"><i class="reset__icon far fa-trash-alt"></i>Reset</button>
-                        <div class="photo__container">
-                            <div class="card__header">
-                                <div class="green__bar"></div>
-                                <div class="full__name">
-                                     <h1 class="preview__title">Nombre Apellido</h1>
-
-                                     <h2 class="preview__subtitle">Front-end Developer</h2>
-
-                                </div>
-                            </div>
-                            <img class="preview__photo" src="https://via.placeholder.com/240x200"
-                            alt="card photo">
-                            <ul class="list__rs">
-                                <li><a class="rs__element" href="tel:"><i class="icon fas fa-mobile-alt"></i></a>
-
-                                </li>
-                                <li><a class="rs__element" href="mailto:"><i class="icon far fa-envelope"></i></a>
-
-                                </li>
-                                <li><a class="rs__element" href="" target="_blank"><i class="icon fab fa-linkedin-in"></i></a>
-
-                                </li>
-                                <li><a class="rs__element" href="" target="_blank"><i class="icon fab fa-github-alt"></i></a>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
                 <section class="main__form">
                     <form action="" method="post">
                         <div class="design__container form__collapsible">
@@ -105,41 +76,63 @@
 
                                 </div>
                             </div>
+                            <div class="fill__main__container">
+                                <label class="label__fill" for="name">Nombre completo</label>
+                                <input class="input__fill" type="text" name="name"
+                                id="name" placeholder="Ej: Silly Sally">
+                                <label class="label__fill" for="job">Puesto</label>
+                                <input class="input__fill" type="text" name="job" id="job"
+                                placeholder="Ej: Front-end unicorn">
+                                <label class="label__fill" for="profile_image">Imagen de perfil</label>
+                                <div class="thumbnail__container">
+                                    <input class="button__thumbnail" type="file" id="avatar" name="avatar"
+                                    accept="image/png, image/jpeg">
+                                    <div class="thumbnail__image"></div>
+                                </div>
+                                <label class="label__fill" for="email">Email</label>
+                                <input class="input__fill" type="email" name="email" id="email"
+                                placeholder="Ej: sally-hill@gmail.com">
+                                <label class="label__fill" for="phone">Teléfono</label>
+                                <input class="input__fill" type="tel" name="tel" id="tel"
+                                placeholder="Ej: 555-55-55-55">
+                                <label class="label__fill" for="phone">Linkedin</label>
+                                <input class="input__fill" type="text" name="linkedin"
+                                id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill">
+                                <label class="label__fill" for="phone">Github</label>
+                                <input class="input__fill" type="text" name="github" id="github"
+                                placeholder="Ej: @sally-hill">
+                            </div>
                         </div>
                     </form>
                 </section>
-                <section class="main_preview">
-                    <button class="btn-reset"><i class="reset__icon far fa-trash-alt"></i>Reset</button>
-                    <div class="photo__container">
-                        <div class="card__header">
-                            <div class="green__bar"></div>
-                            <div class="full__name">
-                                 <h1 class="preview__title">Nombre Apellido</h1>
-
-                                 <h2 class="preview__subtitle">Front-end Developer</h2>
-
-                            </div>
-                        </div>
-                        <img class="preview__photo" src="https://via.placeholder.com/240x200"
-                        alt="card photo">
-                        <ul class="list__rs">
-                            <li><a class="rs__element" href="tel:"><i class="icon fas fa-mobile-alt"></i></a>
-
-                            </li>
-                            <li><a class="rs__element" href="mailto:"><i class="icon far fa-envelope"></i></a>
-
-                            </li>
-                            <li><a class="rs__element" href="" target="_blank"><i class="icon fab fa-linkedin-in"></i></a>
-
-                            </li>
-                            <li><a class="rs__element" href="" target="_blank"><i class="icon fab fa-github-alt"></i></a>
-
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </main>
+                <section class="main__preview">
+                    <div class="preview__wrapper">
+                        <div class="photo__container">
+                            <button class="btn__reset"><i class="reset__icon far fa-trash-alt"></i>Reset</button>
+                            <div class="card__header">
+                                <div class="green__bar"></div>
+                                <div class="full__name">
+                                     <h3 class="preview__title">Nombre Apellido</h1>
+                <h4 class="preview__subtitle">Front-end Developer</h2>
+            </div>
+            </div>
+        <div class="preview__photo">
+            <img class="photo" src="assets/images/sample.jpg" alt="Tu foto va aquí">
         </div>
-    </body>
+        <ul class="list__rs">
+            <li><a class="rs__element" href="tel:"><i class="icon fas fa-mobile-alt"></i></a></li>
+            <li><a class="rs__element" href="mailto:"><i class="icon far fa-envelope"></i></a></li>
+            <li><a class="rs__element" href="" target="_blank"><i class="icon fab fa-linkedin-in"></i></a></li>
+            <li><a class="rs__element" href="" target="_blank"><i class="icon fab fa-github-alt"></i></a></li>
+        </ul>
+    </div>
+</div> 
+    
+    </section>
+ 
+    
+</main>
 
+ </div>
+</body>
 </html>
