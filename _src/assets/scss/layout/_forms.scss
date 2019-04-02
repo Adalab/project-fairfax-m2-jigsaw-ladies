@@ -97,12 +97,3 @@
 .thumbnail__container {
     display: flex;
 }
-
-input[type=”file”].button__thumbnail {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    }
