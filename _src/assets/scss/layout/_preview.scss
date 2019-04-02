@@ -67,6 +67,17 @@
     margin-top: 0;
 }
 
+.preview__photo {
+    width: rem(240);
+    height: rem(200);
+    background-image: url(../images/sample.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.photo {
+    height: 0;
+    width: 0;
+}   
 .list__rs {
     padding-left: rem(15);
     display:flex;
