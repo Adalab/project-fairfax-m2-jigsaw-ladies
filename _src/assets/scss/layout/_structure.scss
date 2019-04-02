@@ -2,5 +2,12 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;    
+    grid-template-rows: 1fr 2fr;  
+    @media all and (min-width:768px)  {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;  
+        padding-top: rem(20);
+        padding-left: rem(40);
+        background-image: linear-gradient(to bottom,$color-background-light, $color-white);
+    }
 }
