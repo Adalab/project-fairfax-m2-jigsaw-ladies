@@ -5,32 +5,32 @@
     border: solid rem(1) $color-white;
     border-radius: rem(15);
     text-transform: uppercase; 
-    margin: 0;
     background-color: transparent;
+    position: absolute;
+    top: -50px;
 }
-
 .main__preview {
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: rem(38);
-    height: rem(457);
+    min-height: rem(457);
     box-sizing: border-box;
     background-image: linear-gradient($color-background-gradient1, $color-background-gradient2);
 }
-
 .preview__wrapper {
+    padding-top: rem(38);
     max-width: rem(240);
-    height: rem(457);
+   /* height: rem(457);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 .reset__icon {
     color: $color-grey; 
     font-size: rem(12);
     padding-right: rem(8);
 }
-
 .photo__container {
     max-width: rem(240);
     background: $color-white;
@@ -38,35 +38,29 @@
     text-align: left;
     border-radius: rem(2);
     box-shadow: 0 rem(1) rem(18) 0 rgba(0,0,0,0.2);
-    margin-top: rem(20);
+    position: relative;
 }
-
 .full__name {
     padding-left: rem(15);
 }
-
 .card__header {
     display: flex;
 }
-
 .green__bar {
     width: rem(5);
     height: rem(42);
     background-color: $color-green;
     margin-top: rem(23); 
 }
-
 .preview__title {
     @include Card---Name;
     margin-bottom: rem(4);
     margin-top: rem(21);
 }  
-
 .preview__subtitle {
     @include Card---role;
     margin-top: 0;
 }
-
 .preview__photo {
     width: rem(240);
     height: rem(200);
@@ -86,12 +80,10 @@
     height: rem(54);
     margin: 0;
 }
-
 .icon {
     font-size: rem(18);
     color: $color-primary;
 }
-
 .rs__element {
     display: flex;
     justify-content: center;
