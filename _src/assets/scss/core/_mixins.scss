@@ -78,8 +78,8 @@
     color: #6b6b6b;
   }
   
-  @mixin Label {
-    font-family: $fontFamilyPrimary;
+  @mixin Label---fillform {
+    font-family: 'Open Sans', sans-serif;
     font-size: rem(14);
     line-height: 1.43;
     color: $color-primary;

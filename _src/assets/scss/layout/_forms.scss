@@ -1,3 +1,4 @@
+/*Design form*/
 .form__collapsible , .design__main__container {
     max-width: 90%;
     margin: 0 auto;
@@ -76,5 +77,16 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+}
+
+/*Fill form*/
+.label__fill {
+    @include Label---fillform;
+}
+
+.input__fill {
+    width: 100%;
+    padding: rem(10);
+    box-sizing: border-box;
 }
 
