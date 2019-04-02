@@ -88,3 +88,13 @@
     @include Input;
 }
 
+.thumbnail__image {
+    width: rem(30);
+    height: rem(30);
+    border: 1px solid grey;
+}
+
+.thumbnail__container {
+    display: flex;
+    
+}
