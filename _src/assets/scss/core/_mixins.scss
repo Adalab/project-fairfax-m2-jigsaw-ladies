@@ -1,5 +1,5 @@
 @mixin Landing---Main-title---table {
-    font-family: 'Merriweather', serif;
+    font-family: $fontFamilyTitle;
     font-size: rem(24);
     font-weight: 900;
     text-align: center;
@@ -7,7 +7,7 @@
   }
   
   @mixin Landing---Main-title---mobile {
-    font-family: 'Merriweather', serif;
+    font-family: $fontFamilyTitle;
     font-size: rem(19);
     font-weight: 900;
     text-align: center;
@@ -15,21 +15,21 @@
   }
   
   @mixin Card---Name {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $fontFamilyTitle;
     font-size: rem(18);
     font-weight: bold;
     color: $color-primary;
   }
   
   @mixin Card-creator---BTN {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(18);
     font-weight: 600;
     color: $color-white;
   }
 
   @mixin Landing---Main-CTA {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(16);
     font-weight: 600;
     text-align: center;
@@ -37,27 +37,27 @@
   }
   
   @mixin Card---role {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $fontFamilyTitle;;
     font-size: rem(16);
     color: $color-grey;
   }
   
   @mixin Landing---Main-text---tablet {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(16);
     text-align: center;
     color: $color-primary;
   }
   
   @mixin Landing---ico-label---tablet {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(16);
     text-align: center;
     color: $color-grey;
   }
   
   @mixin Collapsible-section---title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-weight: 600;
     font-size: 1.125rem;
     color: $color-grey;
@@ -65,56 +65,64 @@
   }
 
   @mixin Collapsible---label {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: 0.87rem;
     color: $color-grey;
     text-transform: uppercase;
   }
   
   @mixin Footer---Copy {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(14);
     line-height: 1.43;
     color: #6b6b6b;
   }
   
   @mixin Label {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(14);
     line-height: 1.43;
     color: $color-primary;
+    display: block;
   }
+
+  @mixin Input {
+    font-family: $fontFamilyPrimary;
+    font-size: rem(14);
+    border: solid 1px $color-green;
+    display: block;
+    }
   
   @mixin Placeholder {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(14);
     line-height: 1.43;
     color: #c5c5c5;
   }
   
   @mixin Upload-button {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(14);
     line-height: 1.43;
     color: $color-white;
   }
   
-  @mixin landign---icon-label {
-    font-family: 'Open Sans', sans-serif;
+  @mixin landing---icon-label {
+    font-family: $fontFamilyPrimary;
     font-size: rem(13);
     text-align: center;
     color: $color-grey;
   }
   
   @mixin Landing---Main-text---mobile {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(13);
     text-align: center;
     color: $color-primary;
   }
   
   @mixin Response-url {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(12);
     font-weight: 600;
     text-align: center;
@@ -122,7 +130,7 @@
   }
   
   @mixin Card---reset {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-size: rem(12);
     color: $color-grey;
   }
