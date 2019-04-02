@@ -1,0 +1,28 @@
+.footer__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: rem(110);
+
+    @media all and (min-width: 768px) {
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 0 rem(40) 0 rem(40);
+        height: rem(60);
+    }
+}
+
+.footer__copyright {
+    @include Footer---Copy;
+    margin: 0 0 rem(11) 0;
+
+    @media all and (min-width: 768px) {
+        margin: 0;
+    }
+}
+
+.footer__image {
+    width: rem(103);
+    height: rem(40);
+}
