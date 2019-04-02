@@ -84,6 +84,8 @@
     line-height: 1.43;
     color: $color-primary;
     display: block;
+    margin-top: rem(20);
+    margin-bottom: rem(10);
   }
 
   @mixin Input {
@@ -91,6 +93,9 @@
     font-size: rem(14);
     border: solid 1px $color-green;
     display: block;
+    width: 100%;
+    padding: rem(10);
+    box-sizing: border-box;
     }
   
   @mixin Placeholder {

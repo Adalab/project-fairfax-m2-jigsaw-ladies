@@ -85,8 +85,6 @@
 }
 
 .input__fill {
-    width: 100%;
-    padding: rem(10);
-    box-sizing: border-box;
+    @include Input;
 }
 
