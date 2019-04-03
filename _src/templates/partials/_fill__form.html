@@ -10,14 +10,16 @@
     </div>
     <div class="fill__main__container">
         <label class="label__fill" for="name">Nombre completo</label>
-        <input class="input__fill" type="text" name="name" id="name" placeholder="Ej: Silly Sally">
+        <input class="input__fill input__name" type="text" name="name" id="name" placeholder="Ej: Silly Sally">
 
         <label class="label__fill" for="job">Puesto</label>
-        <input class="input__fill"  type="text" name="job" id="job" placeholder="Ej: Front-end unicorn">
+        <input class="input__fill input__job"  type="text" name="job" id="job" placeholder="Ej: Front-end unicorn">
         
         <label class="label__fill" for="profile_image">Imagen de perfil</label>
         <div class="thumbnail__container">
-            <input class="button__thumbnail" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+            <label for="avatar"></label>
+            <input class="button__thumbnail" type="file"  id="avatar" name="avatar" accept="image/png, image/jpeg">
+            <div id="info"></div>
             <div class="thumbnail__image"></div>
         </div>
 
