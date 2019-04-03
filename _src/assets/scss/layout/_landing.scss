@@ -4,7 +4,13 @@
     flex-grow: 1;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-bottom: rem(30);
+
+    @media all and (min-width: 768px) {
+        padding-bottom: rem(60);
+        justify-content: center;
+    }
 }
 
 .landing__header {
@@ -17,11 +23,6 @@
 
 .landing__img {
     width: 100%;
-}
-
-.landing__main {
-    display: flex;
-    flex-direction: column;
 }
 
 .landing__title-container {
