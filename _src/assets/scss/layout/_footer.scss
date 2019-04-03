@@ -4,6 +4,7 @@
     justify-content: center;
     flex-direction: column;
     height: rem(110);
+    background-color: $color-white;
     border-top: rem(1) solid #d8d8d8;
 
     @media all and (min-width: 768px) {

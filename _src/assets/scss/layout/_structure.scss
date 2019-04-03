@@ -1,7 +1,22 @@
+body {
+    height: 100%;
+    display: flex;
+}
+.main__body {
+    background-image: linear-gradient(to bottom,$color-background-light, $color-white);
+    justify-content: center;
+}
 .page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+}
+.main__page {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(1024);
+    border: rem(1) solid #d8d8d8;
 }
 
 .main__container {
@@ -15,4 +30,6 @@
         padding: rem(20) rem(40);
         background-image: linear-gradient(to bottom,$color-background-light, $color-white);
     }
+
+
 }
