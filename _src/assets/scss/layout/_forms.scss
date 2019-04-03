@@ -13,7 +13,7 @@
 }
 .design__title__container , .design__main__container {
     display: flex;
-    background: white;
+    background: transparent;
 }
 
 .design__title__container {
@@ -86,6 +86,7 @@
 
 .input__fill {
     @include Input;
+    background-color: transparent;
 }
 
 .fill__main__container {

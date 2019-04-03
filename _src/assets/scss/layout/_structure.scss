@@ -5,16 +5,14 @@
 }
 
 .main__container {
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;  
     @media all and (min-width:768px)  {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;  
-        padding-top: rem(20);
-        padding-right: rem(40);
-        padding-bottom: rem(20);
+        padding: rem(20) rem(40);
         background-image: linear-gradient(to bottom,$color-background-light, $color-white);
     }
 }
