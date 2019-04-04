@@ -53,7 +53,25 @@ function previewCardEmail(event) {
     }
 }
 
+const valueInputLinkedin = document.querySelector(".input__linkedin")
+const valueLinkedin = document.querySelector (".preview__linkedin")
+
+function previewCardLinkedin (email) {
+    const trigger = event.currentTarget;
+    const value = trigger.value;
+
+    if (value === '') {
+        valueLinkedin.innerHTML = '';
+    } else {
+        valueLinkedin.innerHTML = `<a class="rs__element" href="mailto:${value}">
+        <i class="icon far fa-envelope"></i></a>`;
+    }
+}
+
+
+
 valueInputName.addEventListener('keyup', previewCardName);
 valueInputJob.addEventListener('keyup', previewCardJob);
 valueInputTel.addEventListener('keyup', previewCardTel);
 valueInputEmail.addEventListener('keyup', previewCardEmail);
+valueInputLinkedin.addEventListener('keyup', previewCardLinkedin);
