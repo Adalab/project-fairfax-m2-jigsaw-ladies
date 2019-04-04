@@ -1,4 +1,5 @@
-<div class="fill__container form__collapsible">
+<fieldset class="fill__container form__collapsible">
+    <legend>Rellena</legend>
     <div class="design__title__container">
         <div class="first__title">
             <i class="far fa-keyboard icon__collapsible"></i>
@@ -8,26 +9,27 @@
             <i class="fas fa-chevron-down arrow__collapsible"></i>
         </div>
     </div>
+    <small class="legend">Los campos indicados con <span class="legend_plus">*</span> son obligatorios.</small>
     <div class="fill__main__container">
-        <label class="label__fill" for="name">Nombre completo</label>
-        <input class="input__fill input__name" type="text" name="name" id="name" placeholder="Ej: Silly Sally">
+        <label class="label__fill" for="name">Nombre completo <span class="legend_plus">*</span></label>
+        <input class="input__fill input__name" type="text" name="name" id="name" placeholder="Ej: Silly Sally" required>
 
-        <label class="label__fill" for="job">Puesto</label>
-        <input class="input__fill input__job"  type="text" name="job" id="job" placeholder="Ej: Front-end unicorn">
+        <label class="label__fill" for="job">Puesto <span class="legend_plus">*</span></label>
+        <input class="input__fill input__job"  type="text" name="job" id="job" placeholder="Ej: Front-end unicorn" required>
         
-        <label class="label__fill" for="profile_image">Imagen de perfil</label>
+        <label class="label__fill" for="profile_image">Imagen de perfil <span class="legend_plus">*</span></label>
         <div class="thumbnail__container">
             <label for="avatar"></label>
-            <input class="button__thumbnail" type="file"  id="avatar" name="avatar" accept="image/png, image/jpeg">
+            <input class="button__thumbnail" type="file"  id="avatar" name="avatar" accept="image/png, image/jpeg" required>
             <div id="info"></div>
             <div class="thumbnail__image"></div>
         </div>
 
-        <label class="label__fill" for="email">Email</label>
-       <input class="input__fill input__email"  type="email" name="email" id="email" placeholder="Ej: sally-hill@gmail.com">
+        <label class="label__fill" for="email">Email <span class="legend_plus">*</span></label>
+       <input class="input__fill input__email"  type="email" name="email" id="email" placeholder="Ej: sally-hill@gmail.com" required>
 
-       <label class="label__fill" for="tel">Teléfono</label>
-       <input class="input__fill  input__tel"  type="tel" name="tel" id="tel" placeholder="Ej: 555-55-55-55">
+       <label class="label__fill" for="tel">Teléfono <span class="legend_plus">*</span></label>
+       <input class="input__fill  input__tel"  type="tel" name="tel" id="tel" placeholder="Ej: 555-55-55-55" required>
 
        <label class="label__fill" for="linkedin">Linkedin</label>
        <input class="input__fill input__linkedin"  type="text" name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill">
@@ -36,4 +38,4 @@
        <input class="input__fill input__github"  type="text" name="github" id="github" placeholder="Ej: @sally-hill">
 
     </div>
-</div>
+</fieldset>

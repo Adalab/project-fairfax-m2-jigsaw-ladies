@@ -1,3 +1,22 @@
+legend {
+    visibility: hidden;
+    width: 0;
+    height: 0;    
+}
+
+fieldset {
+    border-color: transparent;
+}
+
+.legend {
+    color: grey;
+    padding-top: rem(40);
+}
+
+.legend_plus {
+    color: $color-secundary;
+}
+
 /*Design form*/
 .form__collapsible , .design__main__container {
     max-width: 90%;
@@ -18,6 +37,7 @@
 
 .design__title__container {
     align-items: center;
+    margin-bottom: rem(20);
 }
 
 .first__title {
