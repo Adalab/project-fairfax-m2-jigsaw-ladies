@@ -13,6 +13,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom,$color-background-light, $color-white);
+    
 
 }
 .main__page {
