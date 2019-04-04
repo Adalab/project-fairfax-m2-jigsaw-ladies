@@ -6,8 +6,6 @@ const valueName = document.querySelector(".preview__title");
 const valueInputJob = document.querySelector(".input__job");
 const valueJob = document.querySelector(".preview__subtitle");
 
-const valueInputTel = document.querySelector(".input__tel");
-const valueTel = document.querySelector(".preview__tel");
 
 function previewCardName() {
     if ( valueInputName.value === '') {
@@ -25,11 +23,18 @@ function previewCardJob() {
     }
 }
 
+
+const valueInputTel = document.querySelector(".input__tel");
+const valueTel = document.querySelector(".preview__tel");
+
 function previewCardTel(event) {
-    if ( valueInputTel.value === '') {
-        valueJob.innerHTML = ''
+    const trigger = event.currentTarget;
+    const value = trigger.value;
+
+    if ( value === '') {
+        valueTel.innerHTML = '';
     } else {
-        valueJob.innerHTML = valueInputJob.value;
+        valueTel.innerHTML = `<a class="rs__element" href="tel:${value}"><i class="icon fas fa-mobile-alt"></i></a>`;
     }    
 }
 
