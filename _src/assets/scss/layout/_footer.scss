@@ -14,7 +14,7 @@
         height: rem(60);
     }
     @media all and (min-width: 1024px) {
-        max-width: rem(1024);
+        min-width: rem(1024);
     }
 
 }
