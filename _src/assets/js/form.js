@@ -53,7 +53,38 @@ function previewCardEmail(event) {
     }
 }
 
+const valueInputLinkedin = document.querySelector(".input__linkedin")
+const valueLinkedin = document.querySelector (".preview__linkedin")
+
+function previewCardLinkedin (event) {
+    const trigger = event.currentTarget;
+    const value = trigger.value;
+
+    if (value === '') {
+        valueLinkedin.innerHTML = '';
+    } else {
+        valueLinkedin.innerHTML = `<a class="rs__element" href="${value}"><i class="icon fab fa-linkedin-in"></i></a>`;
+    }
+}
+
+const valueInputGithub = document.querySelector(".input__github")
+const valueGithub = document.querySelector (".preview__github")
+
+function previewCardGithub (event) {
+    const trigger = event.currentTarget;
+    const value = trigger.value;
+
+    if (value === '') {
+        valueGithub.innerHTML = '';
+    } else {
+        valueGithub.innerHTML = `<a class="rs__element" href="${value}" target="_blank"><i class="icon fab fa-github-alt"></i></a>`;
+    }
+}
+
+
 valueInputName.addEventListener('keyup', previewCardName);
 valueInputJob.addEventListener('keyup', previewCardJob);
 valueInputTel.addEventListener('keyup', previewCardTel);
 valueInputEmail.addEventListener('keyup', previewCardEmail);
+valueInputLinkedin.addEventListener('keyup', previewCardLinkedin);
+valueInputGithub.addEventListener('keyup', previewCardGithub);
