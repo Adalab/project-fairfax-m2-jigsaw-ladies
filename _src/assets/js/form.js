@@ -38,6 +38,22 @@ function previewCardTel(event) {
     }    
 }
 
+const valueInputEmail = document.querySelector(".input__email");
+const valueEmail = document.querySelector(".preview__email");
+
+function previewCardEmail(event) {
+    const trigger = event.currentTarget;
+    const value = trigger.value;
+
+    if (value === '') {
+        valueEmail.innerHTML = '';
+    } else {
+        valueEmail.innerHTML = `<a class="rs__element" href="mailto:${value}">
+        <i class="icon far fa-envelope"></i></a>`;
+    }
+}
+
 valueInputName.addEventListener('keyup', previewCardName);
 valueInputJob.addEventListener('keyup', previewCardJob);
 valueInputTel.addEventListener('keyup', previewCardTel);
+valueInputEmail.addEventListener('keyup', previewCardEmail);
