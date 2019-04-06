@@ -1,4 +1,4 @@
-El objectivo de este proyecto es realizar una aplicación web que permite crear las tarjetas de visita personalizadas. El proyecto tiene diseño responsive y está hecho con HTML, CSS y JavaScript. 
+El objectivo de este proyecto es realizar una aplicación web que permite crear las tarjetas de visita personalizadas. El proyecto tiene el diseño responsive y está hecho con HTML, CSS y JavaScript. 
 
 El proyecto consiste en 2 páginas:
 1. La página de bienvenida.
