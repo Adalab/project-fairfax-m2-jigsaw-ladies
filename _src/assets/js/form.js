@@ -53,8 +53,8 @@ function previewCardEmail(event) {
     }
 }
 
-const valueInputLinkedin = document.querySelector(".input__linkedin")
-const valueLinkedin = document.querySelector (".preview__linkedin")
+const valueInputLinkedin = document.querySelector(".input__linkedin");
+const valueLinkedin = document.querySelector (".preview__linkedin");
 
 function previewCardLinkedin (event) {
     const trigger = event.currentTarget;
@@ -67,8 +67,8 @@ function previewCardLinkedin (event) {
     }
 }
 
-const valueInputGithub = document.querySelector(".input__github")
-const valueGithub = document.querySelector (".preview__github")
+const valueInputGithub = document.querySelector(".input__github");
+const valueGithub = document.querySelector (".preview__github");
 
 function previewCardGithub (event) {
     const trigger = event.currentTarget;

@@ -1,9 +1,11 @@
 .footer__wrapper {
-    border-top: rem(1) solid #d8d8d8;
     background-color: $color-white;
     display: flex;
     justify-content: center;
     width: 100%;
+    @media all and (min-width: 768px) {
+    border-top: rem(1) solid #d8d8d8;
+    }
 }
 
 .footer__page {

@@ -3,7 +3,7 @@ body {
 
 }
 .main__body {
-    background-image: linear-gradient(to bottom,$color-background-light, $color-white);
+    background: linear-gradient(to bottom, $color-background-light, $color-white);
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ body {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;  
         padding: rem(20) rem(40);
-        background-image: linear-gradient(to bottom,$color-background-light, $color-white);
+        background: linear-gradient(to bottom, $color-background-light 10%, $color-white 90%);
     }
 
 
