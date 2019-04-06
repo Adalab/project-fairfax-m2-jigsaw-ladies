@@ -19,7 +19,6 @@
     min-height: rem(457);
     box-sizing: border-box;
     background-image: linear-gradient($color-background-gradient1, $color-background-gradient2);
-    height: rem(457);
     @media all and (min-width: 768px) {
         height: 100%;
         grid-column: 2/3;
@@ -103,3 +102,26 @@
     border-radius: rem(25); 
 }
 
+.red__bar {
+    background-color: #E95626;
+}
+
+.red__dark {
+    color: #420101;
+}
+
+.red__light {
+    border-color: #bd1010;
+}
+
+.blue__bar {
+    background-color: #a0c0cf;
+}
+
+.blue__dark {
+    color: #3e5b65;
+}
+
+.blue__light {
+    border-color: #dfe5eb;
+}

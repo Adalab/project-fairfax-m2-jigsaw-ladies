@@ -1,19 +1,28 @@
+.footer__wrapper {
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @media all and (min-width: 768px) {
+    border-top: rem(1) solid #d8d8d8;
+    }
+}
+
 .footer__page {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: rem(110);
-    background-color: $color-white;
-    border-top: rem(1) solid #d8d8d8;
 
     @media all and (min-width: 768px) {
-        justify-content: space-between;
         flex-direction: row;
+        justify-content: space-between;
         padding: 0 rem(40) 0 rem(40);
         height: rem(60);
+        width: 100%;
     }
-    @media all and (min-width: 1024px) {
+    @media all and (min-width: 1024px){
         max-width: rem(1024);
     }
 
