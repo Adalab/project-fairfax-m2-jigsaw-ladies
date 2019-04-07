@@ -111,7 +111,7 @@
 
                                 </label>
                                 <input class="input__fill  input__tel" type="tel" name="tel" id="tel"
-                                pattern="[0-9]{9}" placeholder="Ej: 555-55-55-55" required>
+                                pattern="[0-9]" maxlength="9" placeholder="Ej: 555-55-55-55" required>
                                 <label class="label__fill" for="linkedin">Linkedin</label>
                                 <input class="input__fill input__linkedin" type="text"
                                 name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill">
@@ -155,22 +155,22 @@
                         <img class="photo" src="assets/images/sample.jpg" alt="Tu foto va aquí">
                     </div>
                     <ul class="list__rs">
-                        <li class="preview__tel"> <a class="rs__element" href="tel:">
+                        <li class="preview__tel"> <a class="rs__element rs__tel" href="tel:">
                     <i class="icon fas fa-mobile-alt"></i>
                 </a>
 
                         </li>
-                        <li class="preview__email"> <a class="rs__element" href="mailto:">
+                        <li class="preview__email"> <a class="rs__element rs__email" href="mailto:">
                     <i class="icon far fa-envelope"></i>
                 </a>
 
                         </li>
-                        <li class="preview__linkedin"> <a class="rs__element" href="" target="_blank">
+                        <li class="preview__linkedin"> <a class="rs__element link__linkedin" href="" target="_blank">
                     <i class="icon fab fa-linkedin-in"></i>
                 </a>
 
                         </li>
-                        <li class="preview__github"> <a class="rs__element" href="" target="_blank">
+                        <li class="preview__github"> <a class="rs__element link__github" href="" target="_blank">
                     <i class="icon fab fa-github-alt"></i>
                 </a>
 
