@@ -6,7 +6,6 @@ const valueName = document.querySelector(".preview__title");
 const valueInputJob = document.querySelector(".input__job");
 const valueJob = document.querySelector(".preview__subtitle");
 
-
 function previewCardName() {
     if ( valueInputName.value === '') {
         valueName.innerHTML = "Nombre Apellido";
@@ -26,58 +25,70 @@ function previewCardJob() {
 
 const valueInputTel = document.querySelector(".input__tel");
 const valueTel = document.querySelector(".preview__tel");
+const linkTel = document.querySelector('.rs__tel');
 
 function previewCardTel(event) {
     const trigger = event.currentTarget;
     const value = trigger.value;
 
     if ( value === '') {
-        valueTel.innerHTML = '';
+        linkTel.href = '';
+        valueTel.classList.add('hidden');
+
     } else {
-        valueTel.innerHTML = `<a class="rs__element" href="tel:${value}"><i class="icon fas fa-mobile-alt"></i></a>`;
+        linkTel.href = `"tel:${value}"`;
+        valueTel.classList.remove('hidden');
     }    
 }
 
 const valueInputEmail = document.querySelector(".input__email");
 const valueEmail = document.querySelector(".preview__email");
+const linkEmail = document.querySelector(".rs__email");
 
 function previewCardEmail(event) {
     const trigger = event.currentTarget;
     const value = trigger.value;
 
     if (value === '') {
-        valueEmail.innerHTML = '';
+        linkEmail.href = '';
+        valueEmail.classList.add('hidden');
     } else {
-        valueEmail.innerHTML = `<a class="rs__element" href="mailto:${value}">
-        <i class="icon far fa-envelope"></i></a>`;
+        linkEmail.href = `"mailto:${value}"`;
+        valueEmail.classList.remove('hidden');
     }
 }
 
 const valueInputLinkedin = document.querySelector(".input__linkedin");
 const valueLinkedin = document.querySelector (".preview__linkedin");
+const linkLinkedin = document.querySelector(".link__linkedin");
 
 function previewCardLinkedin (event) {
     const trigger = event.currentTarget;
     const value = trigger.value;
 
     if (value === '') {
-        valueLinkedin.innerHTML = '';
+        linkLinkedin.href = '';
+        valueLinkedin.classList.add('hidden');
     } else {
-        valueLinkedin.innerHTML = `<a class="rs__element" href="${value}"><i class="icon fab fa-linkedin-in"></i></a>`;
+        linkEmail.href = `${value}`;
+        valueLinkedin.classList.remove('hidden');
     }
 }
 
 const valueInputGithub = document.querySelector(".input__github");
-const valueGithub = document.querySelector (".preview__github");
+const valueGithub = document.querySelector(".preview__github");
+const linkGithub = document.querySelector(".link__github");
 
 function previewCardGithub (event) {
     const trigger = event.currentTarget;
     const value = trigger.value;
 
     if (value === '') {
-        valueGithub.innerHTML = '';
+        linkGithub.href = '';
+        valueGithub.classList.add('hidden');
     } else {
-        valueGithub.innerHTML = `<a class="rs__element" href="${value}" target="_blank"><i class="icon fab fa-github-alt"></i></a>`;
+        linkGithub.href = `${value}`;
+        valueGithub.classList.remove('hidden');
     }
 }
 
