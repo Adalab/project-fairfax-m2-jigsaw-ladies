@@ -61,10 +61,12 @@
     @include Card---Name;
     margin-bottom: rem(4);
     margin-top: rem(21);
+    word-break: break-all;
 }  
 .preview__subtitle {
     @include Card---role;
     margin-top: 0;
+    word-break: break-all;
 }
 .preview__photo {
     width: rem(240);
