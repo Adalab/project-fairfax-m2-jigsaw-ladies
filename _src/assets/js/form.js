@@ -70,7 +70,7 @@ function previewCardLinkedin (event) {
         linkLinkedin.href = '';
         valueLinkedin.classList.add('hidden');
     } else {
-        linkEmail.href = `${value}`;
+        linkLinkedin.href = `${value}`;
         valueLinkedin.classList.remove('hidden');
     }
 }
