@@ -53,6 +53,7 @@ fieldset {
 
 .arrow__collapsible {
     margin: 1rem;
+    cursor: pointer;
     @include arrow---collapsible;
 }
 
@@ -149,4 +150,8 @@ fieldset {
 
 .share__icon {
     margin-right: rem(5);
+}
+
+.hidden__collapsible {
+    display: none;
 }
