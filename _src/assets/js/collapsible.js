@@ -13,6 +13,6 @@ function collapsible(containerToHide) {
     containerToHide.classList.toggle('hidden__collapsible');
 }
 
-designCollapsible.addEventListener('click', function(){collapsible(designContainer)});
-fillCollapsible.addEventListener('click', function(){collapsible(fillContainer)});
-shareCollapsible.addEventListener('click', function(){collapsible(shareContainer)});
+designCollapsible.addEventListener('click', function() {collapsible(designContainer)});
+fillCollapsible.addEventListener('click', function() {collapsible(fillContainer)});
+shareCollapsible.addEventListener('click', function() {collapsible(shareContainer)});
