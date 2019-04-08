@@ -53,6 +53,7 @@ fieldset {
 
 .arrow__collapsible {
     margin: 1rem;
+    transform: rotate(180deg);
     cursor: pointer;
     @include arrow---collapsible;
 }
@@ -152,6 +153,11 @@ fieldset {
     margin-right: rem(5);
 }
 
-.hidden__collapsible {
-    display: none;
+.hidden__design {
+    .design__main__container {
+        display: none;
+    }
+    .arrow__collapsible {
+        transform: rotate(0deg);
+    }
 }
