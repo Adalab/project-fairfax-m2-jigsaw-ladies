@@ -15,8 +15,8 @@
     </head>
     
     <body class="main__body">
-        <div class="main__page">
-            <header>
+        <div class="page">
+            <header class="header__container">
                  <h1 class="header"><img src="assets/images/jigsaw_logo.svg" alt="page logo" class="header__logo"></h1>
 
             </header>
@@ -111,7 +111,7 @@
 
                                 </label>
                                 <input class="input__fill  input__tel" type="tel" name="tel" id="tel"
-                                pattern="[0-9]{9}" placeholder="Ej: 555-55-55-55" required>
+                                pattern="[0-9]" maxlength="9" placeholder="Ej: 555-55-55-55" required>
                                 <label class="label__fill" for="linkedin">Linkedin</label>
                                 <input class="input__fill input__linkedin" type="text"
                                 name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill">
@@ -181,12 +181,10 @@
         </section>
         </main>
         <footer>
-            <div class="footer__wrapper">
-                <div class="footer__page">
-                    <p class="footer__copyright">Awesome profile-cards @2018</p>
-                    <img src="assets/images/logo-adalab.png"
-                    alt="logo de adalab" class="footer__image">
-                </div>
+            <div class="footer__page">
+                <p class="footer__copyright">Awesome profile-cards @2018</p>
+                <img src="assets/images/logo-adalab.png"
+                alt="logo de adalab" class="footer__image">
             </div>
         </footer>
         </div>

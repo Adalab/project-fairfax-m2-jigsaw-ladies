@@ -24,12 +24,7 @@
         grid-column: 2/3;
     }
 }
-.preview__wrapper {
-    max-width: rem(240);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .reset__icon {
     color: $color-grey; 
@@ -124,4 +119,7 @@
 
 .blue__light {
     border-color: #dfe5eb;
+}
+.hidden {
+    display: hidden;
 }
