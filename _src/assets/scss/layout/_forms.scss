@@ -124,6 +124,12 @@ fieldset {
     display: flex;   
 }
 
+.ellipsis {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /*Share form*/
 .share__container {
     margin-bottom: rem(30);
