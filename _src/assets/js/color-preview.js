@@ -12,7 +12,5 @@ function paletteChange(paletteSelected) {
 }
 
 inputRed.addEventListener('click', function() {paletteChange('paletteRed')});
-
 inputGreen.addEventListener('click', function() {paletteChange('paletteGreen')});
-
 inputBlue.addEventListener('click', function() {paletteChange('paletteBlue')});
