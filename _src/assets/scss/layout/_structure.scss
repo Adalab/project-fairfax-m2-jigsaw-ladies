@@ -42,8 +42,8 @@ body {
 }
 .main__form {
    height: 100%;
-   min-width: 359px;
    @media all and (min-width: 768px) {
        overflow: scroll;
+       min-width: 359px;
    }
 }
