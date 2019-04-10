@@ -18,7 +18,8 @@
 	"js": {
 		"src": [
       "_src/assets/js/form.js",
-      "_src/assets/js/color-preview.js"
+      "_src/assets/js/color-preview.js",
+      "_src/assets/js/get-avatar.js"
 		],
 		"dest": "public/assets/js/",
     "dist": "docs/assets/js/"

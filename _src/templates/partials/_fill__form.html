@@ -20,9 +20,9 @@
         <label class="label__fill" for="profile_image">Imagen de perfil <span class="legend_plus">*</span></label>
         <div class="thumbnail__container">
             <label for="avatar"></label>
-            <input class="input__file" type="file"  id="avatar" name="avatar" accept="image/png, image/jpeg" required>
-            <div id="info"></div>
-            <div class="thumbnail__image"></div>
+            <button class="action__upload-btn js__profile-trigger" type="button">Añadir imagen</button>
+            <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn" required>
+             <div class="profile__preview js__profile-preview"></div>
         </div>
 
         <label class="label__fill" for="tel">Teléfono <span class="legend_plus">*</span></label>
