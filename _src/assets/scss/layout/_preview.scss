@@ -46,7 +46,7 @@
 .card__header {
     display: flex;
 }
-.green__bar {
+.side__bar {
     width: rem(5);
     height: rem(42);
     background-color: $color-green;
@@ -99,28 +99,58 @@
     border-radius: rem(25); 
 }
 
-.red__bar {
-    background-color: #E95626;
+.paletteRed {
+    .icon {
+        color: #420101;
+    }
+
+    .preview__title {
+        color: #420101;
+    }
+
+    .side__bar {
+        background-color: #E95626; 
+    }
+    
+    .rs__element {
+        border-color: #bd1010;
+    }
 }
 
-.red__dark {
-    color: #420101;
+.paletteGreen {
+    .icon {
+        color: #114e4e;
+    }
+
+    .preview__title {
+        color: #114e4e;
+    }
+
+    .side__bar {
+        background-color: #a2deaf; 
+    }
+    
+    .rs__element {
+        border-color: #a2deaf;
+    }
 }
 
-.red__light {
-    border-color: #bd1010;
-}
-
-.blue__bar {
-    background-color: #a0c0cf;
-}
-
-.blue__dark {
+.paletteBlue {
+    .icon {
     color: #3e5b65;
-}
+    }
 
-.blue__light {
-    border-color: #dfe5eb;
+    .preview__title {
+        color: #114e4e;
+    }
+
+    .side__bar {
+        background-color: #dfe5eb; 
+    }
+    
+    .rs__element {
+        border-color: #dfe5eb;
+    }   
 }
 
 .hidden {
