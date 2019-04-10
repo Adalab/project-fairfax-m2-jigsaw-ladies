@@ -10,27 +10,24 @@
             <i class="fas fa-chevron-down arrow__collapsible"></i>
         </div>
     </div>
-
     <div class="fill__container__section collapsible__container">
-        <small class="legend">Los campos indicados con <span class="legend_plus">*</span> son obligatorios.</small>
 
-        <div class="fill__main__container">
-            <label class="label__fill" for="name">Nombre completo <span class="legend_plus">*</span></label>
-            <input class="input__fill input__name" type="text" name="name" id="name" placeholder="Ej: Silly Sally"
-                required>
+    <small class="legend">Los campos indicados con <span class="legend_plus">*</span> son obligatorios.</small>
+    <div class="fill__main__container">
+        <label class="label__fill" for="name">Nombre completo <span class="legend_plus">*</span></label>
+        <input class="input__fill input__name" type="text" name="name" id="name" placeholder="Ej: Silly Sally" required>
 
-            <label class="label__fill" for="job">Puesto <span class="legend_plus">*</span></label>
-            <input class="input__fill input__job" type="text" name="job" id="job" placeholder="Ej: Front-end unicorn"
-                required>
-
-            <label class="label__fill" for="profile_image">Imagen de perfil <span class="legend_plus">*</span></label>
+        <label class="label__fill" for="job">Puesto <span class="legend_plus">*</span></label>
+        <input class="input__fill input__job"  type="text" name="job" id="job" placeholder="Ej: Front-end unicorn" required>
+        
+        <label class="label__fill" for="profile_image">Imagen de perfil <span class="legend_plus">*</span></label>
             <div class="thumbnail__container">
                 <label for="avatar"></label>
-                <input class="button__thumbnail" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"
-                    required>
-                <div id="info"></div>
-                <div class="thumbnail__image"></div>
+                <button class="action__upload-btn js__profile-trigger" type="button">Añadir imagen</button>
+                <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn" required>
+                    <div class="profile__preview js__profile-preview"></div>
             </div>
+            
 
             <label class="label__fill" for="email">Email <span class="legend_plus">*</span></label>
             <input class="input__fill input__email" type="email" name="email" id="email"

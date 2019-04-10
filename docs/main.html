@@ -98,10 +98,10 @@
                                     </label>
                                     <div class="thumbnail__container">
                                         <label for="avatar"></label>
-                                        <input class="button__thumbnail" type="file" id="avatar" name="avatar"
-                                        accept="image/png, image/jpeg" required>
-                                        <div id="info"></div>
-                                        <div class="thumbnail__image"></div>
+                                        <button class="action__upload-btn js__profile-trigger" type="button">Añadir imagen</button>
+                                        <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn"
+                                        required>
+                                        <div class="profile__preview js__profile-preview"></div>
                                     </div>
                                     <label class="label__fill" for="email">Email <span class="legend_plus">*</span>
 
@@ -153,8 +153,8 @@
 
                         </div>
                     </div>
-                    <div class="preview__photo">
-                        <img class="photo" src="assets/images/sample.jpg" alt="Tu foto va aquí">
+                    <div class="profile">
+                        <div class="profile__image js__profile-image" style="background-image:url(https://via.placeholder.com/200x200/cccccc/666666/?text=IMAGE)"></div>
                     </div>
                     <ul class="list__rs">
                         <li class="preview__tel"> <a class="rs__element rs__tel" href="tel:">
