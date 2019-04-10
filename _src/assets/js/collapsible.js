@@ -1,18 +1,26 @@
 'use strict';
 
-const designContainer = document.querySelector('.design__container');
-const designCollapsible = document.querySelector('.design__collapsible')
+const titleContainer = document.querySelectorAll('.design__title__container');
+const containerFull = document.querySelectorAll('.jscontainer');
 
-const fillContainer = document.querySelector('.fill__container');
-const fillCollapsible = document.querySelector('.fill__collapsible')
-
-const shareContainer = document.querySelector('.share__container');
-const shareCollapsible = document.querySelector('.share__collapsible')
-
-function collapsible(containerToHide) {
-    containerToHide.classList.toggle('hidden__collapsible');
+function closeCollapsible() {
+    for (const collapse of containerFull) {
+        collapse.classList.add('hidden__collapsible');
+    }
 }
 
-designCollapsible.addEventListener('click', function() {collapsible(designContainer)});
-fillCollapsible.addEventListener('click', function() {collapsible(fillContainer)});
-shareCollapsible.addEventListener('click', function() {collapsible(shareContainer)});
+function collapseSection(event) {
+    const trigger = event.currentTarget;
+    const resultTrigger = trigger.parentElement.classList.contains('hidden__collapsible');
+
+    if (resultTrigger === true) {
+        closeCollapsible();
+        trigger.parentElement.classList.remove('hidden__collapsible');
+    } else {
+        trigger.parentElement.classList.add('hidden__collapsible');
+    }
+}
+
+for (const container of titleContainer){
+    container.addEventListener('click', collapseSection);
+}
