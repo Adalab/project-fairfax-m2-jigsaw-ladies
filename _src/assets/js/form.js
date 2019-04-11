@@ -70,7 +70,7 @@ function previewCardLinkedin (event) {
         linkLinkedin.href = '';
         valueLinkedin.classList.add('hidden');
     } else {
-        linkLinkedin.href = `${value}`;
+        linkLinkedin.href = `https://www.linkedin.com/in/${value}`;
         valueLinkedin.classList.remove('hidden');
     }
 }
@@ -87,7 +87,7 @@ function previewCardGithub (event) {
         linkGithub.href = '';
         valueGithub.classList.add('hidden');
     } else {
-        linkGithub.href = `${value}`;
+        linkGithub.href = `https://github.com/${value}`;
         valueGithub.classList.remove('hidden');
     }
 }
