@@ -114,11 +114,11 @@
                                     <input class="input__fill  input__tel" type="tel" name="tel" id="tel"
                                     pattern="[0-9]" maxlength="9" placeholder="Ej: 555-55-55-55" required>
                                     <label class="label__fill" for="linkedin">Linkedin</label>
-                                    <input class="input__fill input__linkedin" type="text"
+                                    <input class="input__fill input__linkedin ellipsis" type="text"
                                     name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill">
                                     <label class="label__fill" for="github">Github</label>
-                                    <input class="input__fill input__github" type="text" name="github"
-                                    id="github" placeholder="Ej: @sally-hill">
+                                    <input class="input__fill input__github ellipsis" type="text"
+                                    name="github" id="github" placeholder="Ej: sally-hill">
                             </div>
         </div>
         </fieldset>
@@ -137,6 +137,13 @@
             <div class="container__button collapsible__container">
                 <button class="share__button" type="submit"><i class="far fa-address-card share__icon"></i>Crear tarjeta</button>
             </div>
+            <div class="twitter__container">
+                 <h2 class="twitter__container--text">La tarjeta ha sido creada</h2>
+ <a href="https://..." class="twitter__container--link">Soy un enlace</a>
+
+                <button
+                class="twitter__container--btn"><i class="fab fa-twitter twitter__icon"></i> Compartir en twitter</button>
+            </div>
         </fieldset>
         </form>
         </section>
@@ -154,7 +161,7 @@
                         </div>
                     </div>
                     <div class="profile">
-                        <div class="profile__image js__profile-image" style="background-image:url(https://via.placeholder.com/200x200/cccccc/666666/?text=IMAGE)"></div>
+                        <div class="preview__photo profile__image js__profile-image" style="background-image:url(https://via.placeholder.com/200x200/cccccc/666666/?text=IMAGE)"></div>
                     </div>
                     <ul class="list__rs">
                         <li class="preview__tel"> <a class="rs__element rs__tel" href="tel:">
