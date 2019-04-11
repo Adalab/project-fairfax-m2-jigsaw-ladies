@@ -168,13 +168,33 @@ fieldset {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: rem(20) 0 rem(30) 0;
 }
 
-.link {
-    text-decoration: none;
+.twitter__container--text {
+    font-family: $fontFamilyPrimary;
+    font-size: rem(18);
+    color: $color-grey;
+    margin: 0;
 }
 
-.tw__btn {
+.twitter__container--link {
     text-decoration: none;
-    
+    font-family: $fontFamilyPrimary;
+    font-size: rem(12);
+    color: $color-secundary;
+    margin: rem(10);
+}
+
+.twitter__container--btn {
+    text-decoration: none;
+    padding: rem(6) rem(10);
+    font-family: $fontFamilyPrimary;
+    font-size: rem(14);
+    color: $color-white;
+    background-color: #00a0f5;
+}
+
+.twitter__icon {
+    font-size: rem(18);
 }
