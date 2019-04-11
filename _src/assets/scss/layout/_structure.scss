@@ -9,32 +9,41 @@ body {
 }
 .main__body {
     background: linear-gradient(to bottom, $color-background-light, $color-white);
+    @media all and (min-width: 768px) {
+        height: 100vh;
+    }
 }
+
 .page {
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background: $color-background-light;
     width: 100%;
     box-sizing: border-box;
-
 }
-
 
 .main__container {
     height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;  
+    display: flex;
+    flex-direction: column-reverse;
     box-sizing: border-box;
     @media all and (min-width:768px)  {
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr;  
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        align-self: stretch;
         padding: rem(20) rem(40);
         background: linear-gradient(to bottom, $color-background-light 10%, $color-white 90%);
     }
-
-
+}
+.main__form {
+   height: 100%;
+   @media all and (min-width: 768px) {
+       overflow: scroll;
+       min-width: 359px;
+   }
 }

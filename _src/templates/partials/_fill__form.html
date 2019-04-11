@@ -1,14 +1,17 @@
-<fieldset class="fill__container form__collapsible">
+<fieldset class="fill__container form__collapsible jscontainer hidden__collapsible">
     <legend>Rellena</legend>
+
     <div class="design__title__container">
         <div class="first__title">
             <i class="far fa-keyboard icon__collapsible"></i>
             <h2 class="collapsible__title">Rellena</h2>
         </div>
-        <div class="second__title">
+        <div class="second__title fill__collapsible">
             <i class="fas fa-chevron-down arrow__collapsible"></i>
         </div>
     </div>
+    <div class="fill__container__section collapsible__container">
+
     <small class="legend">Los campos indicados con <span class="legend_plus">*</span> son obligatorios.</small>
     <div class="fill__main__container">
         <label class="label__fill" for="name">Nombre completo <span class="legend_plus">*</span></label>
@@ -18,18 +21,21 @@
         <input class="input__fill input__job"  type="text" name="job" id="job" placeholder="Ej: Front-end unicorn" required>
         
         <label class="label__fill" for="profile_image">Imagen de perfil <span class="legend_plus">*</span></label>
-        <div class="thumbnail__container">
-            <label for="avatar"></label>
-            <input class="input__file" type="file"  id="avatar" name="avatar" accept="image/png, image/jpeg" required>
-            <div id="info"></div>
-            <div class="thumbnail__image"></div>
-        </div>
+            <div class="thumbnail__container">
+                <label for="avatar"></label>
+                <button class="action__upload-btn js__profile-trigger" type="button">Añadir imagen</button>
+                <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn" required>
+                    <div class="profile__preview js__profile-preview"></div>
+            </div>
+            
 
-        <label class="label__fill" for="tel">Teléfono <span class="legend_plus">*</span></label>
-        <input class="input__fill  input__tel"  type="tel" name="tel" id="tel" pattern="[0-9]" maxlength="9" placeholder="Ej: 555-55-55-55" required>
+            <label class="label__fill" for="email">Email <span class="legend_plus">*</span></label>
+            <input class="input__fill input__email" type="email" name="email" id="email"
+                placeholder="Ej: sally-hill@gmail.com" required>
 
-        <label class="label__fill" for="email">Email <span class="legend_plus">*</span></label>
-       <input class="input__fill input__email"  type="email" name="email" id="email" placeholder="Ej: sally-hill@gmail.com" required>
+            <label class="label__fill" for="tel">Teléfono <span class="legend_plus">*</span></label>
+            <input class="input__fill  input__tel" type="tel" name="tel" id="tel" pattern="[0-9]" maxlength="9"
+                placeholder="Ej: 555-55-55-55" required>
 
        <label class="label__fill" for="linkedin">Linkedin</label>
        <input class="input__fill input__linkedin ellipsis"  type="text" name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill">
@@ -37,5 +43,6 @@
        <label class="label__fill" for="github">Github</label>
        <input class="input__fill input__github ellipsis"  type="text" name="github" id="github" placeholder="Ej: sally-hill">
 
+        </div>
     </div>
 </fieldset>

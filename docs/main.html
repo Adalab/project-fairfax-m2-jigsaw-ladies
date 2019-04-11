@@ -23,7 +23,7 @@
             <main class="main__container">
                 <section class="main__form">
                     <form action="" method="post">
-                        <fieldset class="design__container form__collapsible">
+                        <fieldset class="design__container form__collapsible jscontainer">
                             <legend>Diseña</legend>
                             <div class="design__title__container">
                                 <div class="first__title"> <i class="far fa-object-ungroup icon__collapsible"></i>
@@ -31,17 +31,17 @@
                                      <h2 class="collapsible__title">Diseña</h2>
 
                                 </div>
-                                <div class="second__title"> <i class="fas fa-chevron-down arrow__collapsible"></i>
+                                <div class="second__title design__collapsible"> <i class="fas fa-chevron-down arrow__collapsible"></i>
 
                                 </div>
                             </div>
-                            <div class="design__main__container">
+                            <div class="design__main__container collapsible__container">
                                 <div class="title__color__container">
                                     <p class="color__title">Colores</p>
                                 </div>
                                 <div class="palettes">
                                     <label class="palettes__label" for="color1">
-                                        <input type="radio" id="color1" name="color">
+                                        <input type="radio" id="color1" name="color" checked>
                                         <ul class="theme">
                                             <li class="theme__color" style="background-color:#114e4e">114e4e</li>
                                             <li class="theme__color" style="background-color:#438792">438792</li>
@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                         </fieldset>
-                        <fieldset class="fill__container form__collapsible">
+                        <fieldset class="fill__container form__collapsible jscontainer hidden__collapsible">
                             <legend>Rellena</legend>
                             <div class="design__title__container">
                                 <div class="first__title"> <i class="far fa-keyboard icon__collapsible"></i>
@@ -75,52 +75,54 @@
                                      <h2 class="collapsible__title">Rellena</h2>
 
                                 </div>
-                                <div class="second__title"> <i class="fas fa-chevron-down arrow__collapsible"></i>
+                                <div class="second__title fill__collapsible"> <i class="fas fa-chevron-down arrow__collapsible"></i>
 
                                 </div>
-                            </div> <small class="legend">Los campos indicados con <span class="legend_plus">*</span> son obligatorios.</small>
+                            </div>
+                            <div class="fill__container__section collapsible__container"> <small class="legend">Los campos indicados con <span class="legend_plus">*</span> son obligatorios.</small>
 
-                            <div
-                            class="fill__main__container">
-                                <label class="label__fill" for="name">Nombre completo <span class="legend_plus">*</span>
+                                <div
+                                class="fill__main__container">
+                                    <label class="label__fill" for="name">Nombre completo <span class="legend_plus">*</span>
 
-                                </label>
-                                <input class="input__fill input__name" type="text" name="name" id="name"
-                                placeholder="Ej: Silly Sally" required>
-                                <label class="label__fill" for="job">Puesto <span class="legend_plus">*</span>
+                                    </label>
+                                    <input class="input__fill input__name" type="text" name="name" id="name"
+                                    placeholder="Ej: Silly Sally" required>
+                                    <label class="label__fill" for="job">Puesto <span class="legend_plus">*</span>
 
-                                </label>
-                                <input class="input__fill input__job" type="text" name="job" id="job"
-                                placeholder="Ej: Front-end unicorn" required>
-                                <label class="label__fill" for="profile_image">Imagen de perfil <span class="legend_plus">*</span>
+                                    </label>
+                                    <input class="input__fill input__job" type="text" name="job" id="job"
+                                    placeholder="Ej: Front-end unicorn" required>
+                                    <label class="label__fill" for="profile_image">Imagen de perfil <span class="legend_plus">*</span>
 
-                                </label>
-                                <div class="thumbnail__container">
-                                    <label for="avatar"></label>
-                                    <input class="button__thumbnail" type="file" id="avatar" name="avatar"
-                                    accept="image/png, image/jpeg" required>
-                                    <div id="info"></div>
-                                    <div class="thumbnail__image"></div>
-                                </div>
-                                <label class="label__fill" for="email">Email <span class="legend_plus">*</span>
+                                    </label>
+                                    <div class="thumbnail__container">
+                                        <label for="avatar"></label>
+                                        <button class="action__upload-btn js__profile-trigger" type="button">Añadir imagen</button>
+                                        <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn"
+                                        required>
+                                        <div class="profile__preview js__profile-preview"></div>
+                                    </div>
+                                    <label class="label__fill" for="email">Email <span class="legend_plus">*</span>
 
-                                </label>
-                                <input class="input__fill input__email" type="email" name="email" id="email"
-                                placeholder="Ej: sally-hill@gmail.com" required>
-                                <label class="label__fill" for="tel">Teléfono <span class="legend_plus">*</span>
+                                    </label>
+                                    <input class="input__fill input__email" type="email" name="email" id="email"
+                                    placeholder="Ej: sally-hill@gmail.com" required>
+                                    <label class="label__fill" for="tel">Teléfono <span class="legend_plus">*</span>
 
-                                </label>
-                                <input class="input__fill  input__tel" type="tel" name="tel" id="tel"
-                                pattern="[0-9]" maxlength="9" placeholder="Ej: 555-55-55-55" required>
-                                <label class="label__fill" for="linkedin">Linkedin</label>
-                                <input class="input__fill input__linkedin" type="text"
-                                name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill">
-                                <label class="label__fill" for="github">Github</label>
-                                <input class="input__fill input__github" type="text" name="github"
-                                id="github" placeholder="Ej: @sally-hill">
+                                    </label>
+                                    <input class="input__fill  input__tel" type="tel" name="tel" id="tel"
+                                    pattern="[0-9]" maxlength="9" placeholder="Ej: 555-55-55-55" required>
+                                    <label class="label__fill" for="linkedin">Linkedin</label>
+                                    <input class="input__fill input__linkedin" type="text"
+                                    name="linkedin" id="linkedin" placeholder="Ej: linkedin.com/in/sally.hill">
+                                    <label class="label__fill" for="github">Github</label>
+                                    <input class="input__fill input__github" type="text" name="github"
+                                    id="github" placeholder="Ej: @sally-hill">
+                            </div>
         </div>
         </fieldset>
-        <fieldset class="share__container form__collapsible">
+        <fieldset class="share__container form__collapsible jscontainer hidden__collapsible">
             <legend>Comparte</legend>
             <div class="design__title__container">
                 <div class="first__title"> <i class="far fa-keyboard icon__collapsible"></i>
@@ -128,11 +130,11 @@
                      <h2 class="collapsible__title">Comparte</h2>
 
                 </div>
-                <div class="second__title"> <i class="fas fa-chevron-down arrow__collapsible"></i>
+                <div class="second__title share__collapsible"> <i class="fas fa-chevron-down arrow__collapsible"></i>
 
                 </div>
             </div>
-            <div class="container__button">
+            <div class="container__button collapsible__container">
                 <button class="share__button" type="submit"><i class="far fa-address-card share__icon"></i>Crear tarjeta</button>
             </div>
         </fieldset>
@@ -143,7 +145,7 @@
                 <div class="photo__container">
                     <button class="btn__reset"><i class="reset__icon far fa-trash-alt"></i>Reset</button>
                     <div class="card__header">
-                        <div class="green__bar"></div>
+                        <div class="side__bar"></div>
                         <div class="full__name">
                              <h3 class="preview__title">Nombre Apellido</h3>
 
@@ -151,8 +153,8 @@
 
                         </div>
                     </div>
-                    <div class="preview__photo">
-                        <img class="photo" src="assets/images/sample.jpg" alt="Tu foto va aquí">
+                    <div class="profile">
+                        <div class="profile__image js__profile-image" style="background-image:url(https://via.placeholder.com/200x200/cccccc/666666/?text=IMAGE)"></div>
                     </div>
                     <ul class="list__rs">
                         <li class="preview__tel"> <a class="rs__element rs__tel" href="tel:">
@@ -182,9 +184,10 @@
         </main>
         <footer>
             <div class="footer__page">
-                <p class="footer__copyright">Awesome profile-cards @2018</p>
-                <img src="assets/images/logo-adalab.png"
-                alt="logo de adalab" class="footer__image">
+                <p class="footer__copyright">Awesome profile-cards @2018</p> <a href="https://adalab.es/" target="_blank">
+         <img src="assets/images/logo-adalab.png" alt="logo de adalab" class="footer__image">
+        </a>
+
             </div>
         </footer>
         </div>
