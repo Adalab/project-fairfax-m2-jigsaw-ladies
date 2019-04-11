@@ -1,5 +1,27 @@
 'use strict';
 
+const defaultValues = {
+    palette: 1,
+    name: 'Nombre Apellido',
+    job: 'Front-end Developer',
+    phone: +34666666666,
+    email: 'sally-hill@gmail.com',
+    linkedin: 'sally.hill',
+    github: 'sally-hill',
+    /*photo*/
+}
+
+const emptyValues = {
+    palette: '',
+    name: '',
+    job: '',
+    phone: '',
+    email: '',
+    linkedin: '',
+    github: '',
+    /*photo*/
+}
+
 const valueInputName = document.querySelector(".input__name");
 const valueName = document.querySelector(".preview__title");
 
