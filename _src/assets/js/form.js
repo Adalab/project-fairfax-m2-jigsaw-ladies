@@ -1,6 +1,6 @@
 'use strict';
 
-const defaultValues = {
+const card = {
     palette: 1,
     name: 'Nombre Apellido',
     job: 'Front-end Developer',
@@ -8,17 +8,6 @@ const defaultValues = {
     email: 'sally-hill@gmail.com',
     linkedin: 'sally.hill',
     github: 'sally-hill',
-    /*photo*/
-}
-
-const emptyValues = {
-    palette: '',
-    name: '',
-    job: '',
-    phone: '',
-    email: '',
-    linkedin: '',
-    github: '',
     /*photo*/
 }
 
@@ -30,6 +19,7 @@ const valueJob = document.querySelector(".preview__subtitle");
 
 
 function previewCardName() {
+    console.log(valueInputName);
     if ( valueInputName.value === '') {
         valueName.innerHTML = "Nombre Apellido";
     } else {
