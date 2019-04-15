@@ -1,7 +1,7 @@
 'use strict';
 
 const btn = document.querySelector('.btn__reset');
-const card = {
+const defaultValues = {
     palette: 1,
     name: 'Nombre Apellido',
     job: 'Front-end Developer',
