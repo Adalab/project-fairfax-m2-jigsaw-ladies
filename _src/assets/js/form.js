@@ -1,7 +1,7 @@
 'use strict';
 
 const btn = document.querySelector('.btn__reset');
-const defaultValues = {
+const card = {
     palette: 1,
     name: 'Nombre Apellido',
     job: 'Front-end Developer',
@@ -10,7 +10,8 @@ const defaultValues = {
     linkedin: 'sally.hill',
     github: 'sally-hill',
     /*photo*/
-};
+}
+
 const valueInputName = document.querySelector(".input__name");
 const valueName = document.querySelector(".preview__title");
 const valueInputJob = document.querySelector(".input__job");
