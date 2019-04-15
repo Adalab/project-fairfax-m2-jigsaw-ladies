@@ -118,7 +118,3 @@ valueInputGithub.addEventListener('keyup', function() {previewCard(event, valueG
 //         valueGithub.innerHTML = `<a class="rs__element" href="${value}" target="_blank"><i class="icon fab fa-github-alt"></i></a>`;
 //     }
 // }
-
-
-
-
