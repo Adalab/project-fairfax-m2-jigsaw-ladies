@@ -131,7 +131,3 @@ function storage() {
     localStorage.setItem('dataInfo', JSON.stringify(dataInfo));
 
 }
-
-
-
-
