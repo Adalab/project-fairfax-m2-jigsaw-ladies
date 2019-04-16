@@ -12,6 +12,9 @@ const defaultValues = {
     /*photo*/
 }
 
+
+  
+
 const valueInputName = document.querySelector(".input__name");
 const valueName = document.querySelector(".preview__title");
 const valueInputJob = document.querySelector(".input__job");
@@ -36,19 +39,25 @@ const linkGithub = document.querySelector(".link__github");
 // }
 
 // btn.addEventListener('click', resetInfo);
+const dataInfo = {};
 
 
-function previewCard(event, preview, text) {
+function previewCard(event, preview, text, objectKey) {
     const valueInput = event.currentTarget.value;
     if (valueInput === '') {
                 preview.innerHTML = text;
             } else {
                 preview.innerHTML = valueInput;
+                dataInfo[objectKey] = valueInput;
+                console.log(dataInfo);
+                storage();
+
+
             }
         }
 
-valueInputName.addEventListener('keyup', function() {previewCard(event, valueName, 'Nombre Apellido')});
-valueInputJob.addEventListener('keyup', function() {previewCard(event, valueJob, 'Front-end Developer')});
+valueInputName.addEventListener('keyup', function() {previewCard(event, valueName, 'Nombre Apellido', 'name')});
+valueInputJob.addEventListener('keyup', function() {previewCard(event, valueJob, 'Front-end Developer', 'job')});
 valueInputTel.addEventListener('keyup', previewCardTel);
 valueInputEmail.addEventListener('keyup', previewCardEmail);
 valueInputLinkedin.addEventListener('keyup', previewCardLinkedin);
@@ -65,6 +74,9 @@ function previewCardTel(event) {
     } else {
         linkTel.href = `"tel:${value}"`;
         valueTel.classList.remove('hidden');
+       dataInfo.phone = value;
+       storage();
+
     }    
 }
 
@@ -78,6 +90,9 @@ function previewCardEmail(event) {
     } else {
         linkEmail.href = `"mailto:${value}"`;
         valueEmail.classList.remove('hidden');
+      dataInfo.email = value;
+      storage();
+
     }
 }
 
@@ -91,6 +106,9 @@ function previewCardLinkedin (event) {
     } else {
         linkLinkedin.href = `https://www.linkedin.com/in/${value}`;
         valueLinkedin.classList.remove('hidden');
+       dataInfo.linkedin = value;
+       storage();
+
     }
 }
 
@@ -104,5 +122,16 @@ function previewCardGithub (event) {
     } else {
         linkGithub.href = `https://github.com/${value}`;
         valueGithub.classList.remove('hidden');
+      dataInfo.github = value;
+      storage();
+
     }
 }
+function storage() {
+    localStorage.setItem('dataInfo', JSON.stringify(dataInfo));
+
+}
+
+
+
+
