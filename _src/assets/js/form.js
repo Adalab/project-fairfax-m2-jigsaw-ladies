@@ -6,8 +6,8 @@ const defaultValues = {
     phone: '',
     email: '',
     linkedin: '',
-    github: ''
-    /*photo*/
+    github: '',
+    photo: 'https://placehold.it/240x200'
  };
 const valueInputName = document.querySelector(".input__name");
 const valueName = document.querySelector(".preview__title");
@@ -99,16 +99,30 @@ function previewCardGithub (event) {
     }
 }
 
-function hidden() {
+function hiddenIcon() {
     for (const icon of resetIcons) {
         icon.classList.add('hidden');
     }
 }
 
+function hiddenFields(){
+    for(const field of resetFields){
+        field.innerHTML = "";
+    }
+}
+
 function testGithub() {
-    valueInputGithub.value = "";
+    valueName.innerHTML = defaultValues.name;
+    valueJob.innerHTML = defaultValues.job;
+    valueTel.innerHTML = defaultValues.phone;
+    valueEmail.innerHTML = defaultValues.email;
     valueGithub.innerHTML = defaultValues.github;
-    hidden();
+    valueLinkedin.innerHTML = defaultValues.linkedin;
+    hiddenIcon();
+    hiddenFields();
+    paletteChange('paletteGreen');
+    //error aquí
+    //inputGreen.checked = 'checked';
     } 
     
-    btnReset.addEventListener('click', testGithub); 
+btnReset.addEventListener('click', testGithub); 
