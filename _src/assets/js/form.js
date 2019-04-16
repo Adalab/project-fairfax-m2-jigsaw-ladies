@@ -1,17 +1,15 @@
 'use strict';
 
-const btn = document.querySelector('.btn__reset');
 const defaultValues = {
     palette: 1,
     name: 'Nombre Apellido',
     job: 'Front-end Developer',
-    phone: +34666666666,
-    email: 'sally-hill@gmail.com',
-    linkedin: 'sally.hill',
-    github: 'sally-hill',
+    phone: '',
+    email: '',
+    linkedin: '',
+    github: ''
     /*photo*/
-}
-
+};
 const valueInputName = document.querySelector(".input__name");
 const valueName = document.querySelector(".preview__title");
 const valueInputJob = document.querySelector(".input__job");
@@ -27,16 +25,11 @@ const valueLinkedin = document.querySelector (".preview__linkedin");
 const linkLinkedin = document.querySelector(".link__linkedin");
 const valueInputGithub = document.querySelector(".input__github");
 const valueGithub = document.querySelector (".preview__github");
-const linkGithub = document.querySelector(".link__github");         
-
-
-// function resetInfo() {
-//     /* Que los emptyValue se sustituyan, al pinchar el botón de reset, por los defaultValues */
-//     emptyValues.value = defaultValues.value;
-// }
-
-// btn.addEventListener('click', resetInfo);
-
+const linkGithub = document.querySelector(".link__github"); 
+const btnReset = document.querySelector('.btn__reset');
+const resetFields = document.querySelectorAll('.input__fill');
+const resetImg = document.querySelector('.preview__photo');
+const resetIcons = document.querySelectorAll('.reset__icon');       
 
 function previewCard(event, preview, text) {
     const valueInput = event.currentTarget.value;
@@ -47,62 +40,81 @@ function previewCard(event, preview, text) {
             }
         }
 
-valueInputName.addEventListener('keyup', function() {previewCard(event, valueName, 'Nombre Apellido')});
-valueInputJob.addEventListener('keyup', function() {previewCard(event, valueJob, 'Front-end Developer')});
+valueInputName.addEventListener('keyup', function(event) {previewCard(event, valueName, 'Nombre Apellido')});
+valueInputJob.addEventListener('keyup', function(event) {previewCard(event, valueJob, 'Front-end Developer')});
 valueInputTel.addEventListener('keyup', previewCardTel);
 valueInputEmail.addEventListener('keyup', previewCardEmail);
 valueInputLinkedin.addEventListener('keyup', previewCardLinkedin);
 valueInputGithub.addEventListener('keyup', previewCardGithub);
 
 function previewCardTel(event) {
-    const trigger = event.currentTarget;
-    const value = trigger.value;
+    const trigger = event.currentTarget.value;
+    input__tel.value = defaultValues.phone;
 
     if ( value === '') {
         linkTel.href = '';
         valueTel.classList.add('hidden');
 
     } else {
-        linkTel.href = `"tel:${value}"`;
+        linkTel.href = `"tel:${trigger}"`;
         valueTel.classList.remove('hidden');
     }    
 }
 
 function previewCardEmail(event) {
-    const trigger = event.currentTarget;
-    const value = trigger.value;
+    const trigger = event.currentTarget.value;
+    input__email.value = defaultValues.email;
 
     if (value === '') {
         linkEmail.href = '';
         valueEmail.classList.add('hidden');
     } else {
-        linkEmail.href = `"mailto:${value}"`;
+        linkEmail.href = `"mailto:${trigger}"`;
         valueEmail.classList.remove('hidden');
     }
 }
 
 function previewCardLinkedin (event) {
-    const trigger = event.currentTarget;
-    const value = trigger.value;
+    const trigger = event.currentTarget.value;
+    input__linkedin.value = defaultValues.linkedin;
 
     if (value === '') {
         linkLinkedin.href = '';
         valueLinkedin.classList.add('hidden');
     } else {
-        linkLinkedin.href = `https://www.linkedin.com/in/${value}`;
+        linkLinkedin.href = `https://www.linkedin.com/in/${trigger}`;
         valueLinkedin.classList.remove('hidden');
     }
 }
 
 function previewCardGithub (event) {
-    const trigger = event.currentTarget;
-    const value = trigger.value;
+    const trigger = event.currentTarget.value;
+    valueInputGithub.value = defaultValues.github;
 
     if (value === '') {
         linkGithub.href = '';
         valueGithub.classList.add('hidden');
     } else {
-        linkGithub.href = `https://github.com/${value}`;
+        linkGithub.href = `https://github.com/${trigger}`;
         valueGithub.classList.remove('hidden');
     }
 }
+
+function defaultIcons() {
+    for (const icon of resetIcons) {
+        icon.value = "";
+    }
+} 
+
+function resetInfo() {
+    console.log('hgsdjhfghdfghjdfg');
+    for (const item of resetFields) {
+        item.value = "";
+        paletteChange('paletteGreen');
+        inputGreen.checked = 'checked';
+        previewCard();
+        defaultIcons();
+    }
+}
+
+btnReset.addEventListener('click', resetInfo); 
