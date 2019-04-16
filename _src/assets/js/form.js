@@ -123,33 +123,31 @@ function storage() {
   localStorage.setItem("dataInfo", JSON.stringify(dataInfo));
 }
 
-function getStorage(){
-    const savedData = JSON.parse(localStorage.getItem('dataInfo'));
-    if (savedData !== '') {
-        valueInputName.value = savedData.name;
-        valueName.innerHTML = savedData.name;
-        valueInputJob.value = savedData.job;
-        valueJob.innerHTML = savedData.job;
-        valueInputTel.value = savedData.phone;
-        linkTel.href = savedData.phone;
-        valueInputEmail.value = savedData.email;
-        linkEmail.href = savedData.email;
-        valueInputLinkedin.value = savedData.linkedin;
-        linkLinkedin.href = savedData.linkedin;
-        valueInputGithub.value = savedData.github;
-        linkGithub.href = savedData.github;
-        printIcon(savedData,'email',valueEmail);
-        printIcon(savedData,'phone',valueTel);
-        printIcon(savedData,'linkedin',valueLinkedin);
-        printIcon(savedData,'github',valueGithub);
+function getStorage() {
+  const savedData = JSON.parse(localStorage.getItem("dataInfo"));
+  if (savedData !== "") {
+    valueInputName.value = savedData.name;
+    valueName.innerHTML = savedData.name;
+    valueInputJob.value = savedData.job;
+    valueJob.innerHTML = savedData.job;
+    valueInputTel.value = savedData.phone;
+    linkTel.href = savedData.phone;
+    valueInputEmail.value = savedData.email;
+    linkEmail.href = savedData.email;
+    valueInputLinkedin.value = savedData.linkedin;
+    linkLinkedin.href = savedData.linkedin;
+    valueInputGithub.value = savedData.github;
+    linkGithub.href = savedData.github;
+    printIcon(savedData, "email", valueEmail);
+    printIcon(savedData, "phone", valueTel);
+    printIcon(savedData, "linkedin", valueLinkedin);
+    printIcon(savedData, "github", valueGithub);
+  }
+
+  function printIcon(object, objectkey, preview) {
+    if (object[objectkey] !== "") {
+      preview.classList.remove("hidden");
     }
-
-    function printIcon(object, objectkey, preview) {
-        if (object[objectkey] !== '') {
-            preview.classList.remove('hidden');
-        }
-    }
-
-
+  }
 }
 getStorage();
