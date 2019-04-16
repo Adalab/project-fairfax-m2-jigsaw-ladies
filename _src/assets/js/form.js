@@ -2,14 +2,14 @@
 
 const btn = document.querySelector(".btn__reset");
 const defaultValues = {
-  palette: 1,
-  name: "Nombre Apellido",
-  job: "Front-end Developer",
-  phone: +34666666666,
-  email: "sally-hill@gmail.com",
-  linkedin: "sally.hill",
-  github: "sally-hill"
-  /*photo*/
+    palette: 1,
+    name: "Nombre Apellido",
+    job: "Front-end Developer",
+    phone: +34666666666,
+    email: "sally-hill@gmail.com",
+    linkedin: "sally.hill",
+    github: "sally-hill"
+    /*photo*/
 };
 
 const valueInputName = document.querySelector(".input__name");
@@ -35,25 +35,30 @@ const valueInputLinkedin = document.querySelector(".input__linkedin");
 // }
 
 // btn.addEventListener('click', resetInfo);
-const dataInfo = {};
+const dataInfo = {
+    name: '',
+    job: '',
+    phone: '',
+    email: '',
+    linkedin: '',
+    github: ''
+};
 
 function previewCard(event, preview, text, objectKey) {
-  const valueInput = event.currentTarget.value;
-  if (valueInput === "") {
-    preview.innerHTML = text;
-  } else {
-    preview.innerHTML = valueInput;
-    dataInfo[objectKey] = valueInput;
-    console.log(dataInfo);
-    storage();
-  }
+    const valueInput = event.currentTarget.value;
+    if (valueInput === "") {
+        preview.innerHTML = text;
+    } else {
+        preview.innerHTML = valueInput;
+        objStorage();
+    }
 }
 
-valueInputName.addEventListener("keyup", function() {
-  previewCard(event, valueName, "Nombre Apellido", "name");
+valueInputName.addEventListener("keyup", function () {
+    previewCard(event, valueName, "Nombre Apellido", "name");
 });
-valueInputJob.addEventListener("keyup", function() {
-  previewCard(event, valueJob, "Front-end Developer", "job");
+valueInputJob.addEventListener("keyup", function () {
+    previewCard(event, valueJob, "Front-end Developer", "job");
 });
 valueInputTel.addEventListener("keyup", previewCardTel);
 valueInputEmail.addEventListener("keyup", previewCardEmail);
@@ -61,93 +66,103 @@ valueInputLinkedin.addEventListener("keyup", previewCardLinkedin);
 valueInputGithub.addEventListener("keyup", previewCardGithub);
 
 function previewCardTel(event) {
-  const trigger = event.currentTarget;
-  const value = trigger.value;
+    const trigger = event.currentTarget;
+    const value = trigger.value;
 
-  if (value === "") {
-    linkTel.href = "";
-    valueTel.classList.add("hidden");
-  } else {
-    linkTel.href = `"tel:${value}"`;
-    valueTel.classList.remove("hidden");
-    dataInfo.phone = value;
-    storage();
-  }
+    if (value === "") {
+        linkTel.href = "";
+        valueTel.classList.add("hidden");
+    } else {
+        linkTel.href = `"tel:${value}"`;
+        valueTel.classList.remove("hidden");
+        objStorage();
+    }
 }
 
 function previewCardEmail(event) {
-  const trigger = event.currentTarget;
-  const value = trigger.value;
+    const trigger = event.currentTarget;
+    const value = trigger.value;
 
-  if (value === "") {
-    linkEmail.href = "";
-    valueEmail.classList.add("hidden");
-  } else {
-    linkEmail.href = `"mailto:${value}"`;
-    valueEmail.classList.remove("hidden");
-    dataInfo.email = value;
-    storage();
-  }
+    if (value === "") {
+        linkEmail.href = "";
+        valueEmail.classList.add("hidden");
+    } else {
+        linkEmail.href = `"mailto:${value}"`;
+        valueEmail.classList.remove("hidden");
+        objStorage();
+    }
 }
 
 function previewCardLinkedin(event) {
-  const trigger = event.currentTarget;
-  const value = trigger.value;
+    const trigger = event.currentTarget;
+    const value = trigger.value;
 
-  if (value === "") {
-    linkLinkedin.href = "";
-    valueLinkedin.classList.add("hidden");
-  } else {
-    linkLinkedin.href = `https://www.linkedin.com/in/${value}`;
-    valueLinkedin.classList.remove("hidden");
-    dataInfo.linkedin = value;
-    storage();
-  }
+    if (value === "") {
+        linkLinkedin.href = "";
+        valueLinkedin.classList.add("hidden");
+    } else {
+        linkLinkedin.href = `https://www.linkedin.com/in/${value}`;
+        valueLinkedin.classList.remove("hidden");
+        objStorage();
+    }
 }
 
 function previewCardGithub(event) {
-  const trigger = event.currentTarget;
-  const value = trigger.value;
+    const trigger = event.currentTarget;
+    const value = trigger.value;
 
-  if (value === "") {
-    linkGithub.href = "";
-    valueGithub.classList.add("hidden");
-  } else {
-    linkGithub.href = `https://github.com/${value}`;
-    valueGithub.classList.remove("hidden");
-    dataInfo.github = value;
-    storage();
-  }
-}
-function storage() {
-  localStorage.setItem("dataInfo", JSON.stringify(dataInfo));
-}
-
-function getStorage() {
-  const savedData = JSON.parse(localStorage.getItem("dataInfo"));
-  if (savedData !== "") {
-    valueInputName.value = savedData.name;
-    valueName.innerHTML = savedData.name;
-    valueInputJob.value = savedData.job;
-    valueJob.innerHTML = savedData.job;
-    valueInputTel.value = savedData.phone;
-    linkTel.href = savedData.phone;
-    valueInputEmail.value = savedData.email;
-    linkEmail.href = savedData.email;
-    valueInputLinkedin.value = savedData.linkedin;
-    linkLinkedin.href = savedData.linkedin;
-    valueInputGithub.value = savedData.github;
-    linkGithub.href = savedData.github;
-    printIcon(savedData, "email", valueEmail);
-    printIcon(savedData, "phone", valueTel);
-    printIcon(savedData, "linkedin", valueLinkedin);
-    printIcon(savedData, "github", valueGithub);
-  }
-
-  function printIcon(object, objectkey, preview) {
-    if (object[objectkey] !== "") {
-      preview.classList.remove("hidden");
+    if (value === "") {
+        linkGithub.href = "";
+        valueGithub.classList.add("hidden");
+    } else {
+        linkGithub.href = `https://github.com/${value}`;
+        valueGithub.classList.remove("hidden");
+        objStorage();
     }
-  }
 }
+
+function objStorage() {
+    dataInfo.name = valueInputName.value;
+    dataInfo.job = valueInputJob.value;
+    dataInfo.phone = valueInputTel.value;
+    dataInfo.email = valueInputEmail.value;
+    dataInfo.linkedin = valueInputLinkedin.value;
+    dataInfo.github = valueInputGithub.value;
+    storage();
+}
+
+function storage() {
+    localStorage.setItem("dataInfo", JSON.stringify(dataInfo));
+}
+
+function getStorage() {  
+    const savedData = JSON.parse(localStorage.getItem("dataInfo"));
+    if (savedData === null) {
+        storage();
+    } else {
+        valueInputName.value = savedData.name;
+        valueName.innerHTML = savedData.name;
+        valueInputJob.value = savedData.job;
+        valueJob.innerHTML = savedData.job;
+        valueInputTel.value = savedData.phone;
+        linkTel.href = savedData.phone;
+        valueInputEmail.value = savedData.email;
+        linkEmail.href = savedData.email;
+        valueInputLinkedin.value = savedData.linkedin;
+        linkLinkedin.href = savedData.linkedin;
+        valueInputGithub.value = savedData.github;
+        linkGithub.href = savedData.github;
+        printIcon(savedData, "email", valueEmail);
+        printIcon(savedData, "phone", valueTel);
+        printIcon(savedData, "linkedin", valueLinkedin);
+        printIcon(savedData, "github", valueGithub);
+    }
+}
+
+function printIcon(object, objectkey, preview) {
+    if (object[objectkey] !== "") {
+        preview.classList.remove("hidden");
+    }
+}
+
 getStorage();
