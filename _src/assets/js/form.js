@@ -118,6 +118,8 @@ function testGithub() {
     valueEmail.innerHTML = defaultValues.email;
     valueGithub.innerHTML = defaultValues.github;
     valueLinkedin.innerHTML = defaultValues.linkedin;
+    //photo
+    //resetImg.innerHTML = defaultValues.photo;
     hiddenIcon();
     hiddenFields();
     paletteChange('paletteGreen');
