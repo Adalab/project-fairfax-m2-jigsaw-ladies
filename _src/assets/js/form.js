@@ -1,7 +1,6 @@
 'use strict';
 
 const defaultValues = {
-    palette: 1,
     name: 'Nombre Apellido',
     job: 'Front-end Developer',
     phone: '',
@@ -100,21 +99,9 @@ function previewCardGithub (event) {
     }
 }
 
-function defaultIcons() {
-    for (const icon of resetIcons) {
-        icon.value = "";
-    }
+function testGithub() {
+valueInputGithub.value = "";
+valueGithub = defaultValues.github;
 } 
 
-function resetInfo() {
-    console.log('hgsdjhfghdfghjdfg');
-    for (const item of resetFields) {
-        item.value = "";
-        paletteChange('paletteGreen');
-        inputGreen.checked = 'checked';
-        previewCard();
-        defaultIcons();
-    }
-}
-
-btnReset.addEventListener('click', resetInfo); 
+btnReset.addEventListener('click', testGithub); 
