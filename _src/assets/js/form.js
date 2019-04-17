@@ -107,7 +107,7 @@ function hiddenIcon() {
 
 function hiddenFields(){
     for(const field of resetFields){
-        field.innerHTML = "";
+        field.value = "";
     }
 }
 
@@ -123,8 +123,7 @@ function resetButton() {
     hiddenIcon();
     hiddenFields();
     paletteChange('paletteGreen');
-    //error aquí
-    //inputGreen.checked = 'checked';
+    inputGreen.checked = true;
     } 
     
 btnReset.addEventListener('click', resetButton); 

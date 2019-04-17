@@ -32,18 +32,7 @@ function writeImage() {
   /* En la propiedad `result` de nuestro FR se almacena
    * el resultado
    */
-
-   //Empieza base64
-  fr.onloadend = function() {
-    profileImage.style.backgroundImage = `url(${fr.result})`;
-    if (fileField) {
-      fr.readAsDataURL (fileField);
-    } else {
-      profileImage.src = '';
-    }
-  }
-   //Termina base 64
-  
+  profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
 }
 
