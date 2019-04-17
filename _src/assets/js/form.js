@@ -7,7 +7,7 @@ const defaultValues = {
     email: '',
     linkedin: '',
     github: '',
-    photo: 'https://placehold.it/240x200'
+    photo: 'https://via.placeholder.com/200x200/cccccc/666666/?text=IMAGE'
  };
 const valueInputName = document.querySelector(".input__name");
 const valueName = document.querySelector(".preview__title");
@@ -118,8 +118,9 @@ function resetButton() {
     valueEmail.innerHTML = defaultValues.email;
     valueGithub.innerHTML = defaultValues.github;
     valueLinkedin.innerHTML = defaultValues.linkedin;
-    //photo
-    //resetImg.innerHTML = defaultValues.photo;
+    //photo. Error aquí tmbn 
+    profileImage.style.backgroundImage = `url(${defaultValues.photo})`;
+    profilePreview.style.backgroundImage = `url(${defaultValues.photo})`;
     hiddenIcon();
     hiddenFields();
     paletteChange('paletteGreen');
