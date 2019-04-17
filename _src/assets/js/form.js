@@ -1,17 +1,14 @@
 'use strict';
 
-const btn = document.querySelector('.btn__reset');
 const defaultValues = {
-    palette: 1,
     name: 'Nombre Apellido',
     job: 'Front-end Developer',
-    phone: +34666666666,
-    email: 'sally-hill@gmail.com',
-    linkedin: 'sally.hill',
-    github: 'sally-hill',
-    /*photo*/
-}
-
+    phone: '',
+    email: '',
+    linkedin: '',
+    github: '',
+    photo: 'https://via.placeholder.com/200x200/cccccc/666666/?text=IMAGE'
+ };
 const valueInputName = document.querySelector(".input__name");
 const valueName = document.querySelector(".preview__title");
 const valueInputJob = document.querySelector(".input__job");
@@ -27,16 +24,11 @@ const valueLinkedin = document.querySelector (".preview__linkedin");
 const linkLinkedin = document.querySelector(".link__linkedin");
 const valueInputGithub = document.querySelector(".input__github");
 const valueGithub = document.querySelector (".preview__github");
-const linkGithub = document.querySelector(".link__github");         
-
-
-// function resetInfo() {
-//     /* Que los emptyValue se sustituyan, al pinchar el botón de reset, por los defaultValues */
-//     emptyValues.value = defaultValues.value;
-// }
-
-// btn.addEventListener('click', resetInfo);
-
+const linkGithub = document.querySelector(".link__github");
+const btnReset = document.querySelector('.btn__reset');
+const resetFields = document.querySelectorAll('.input__fill');
+const resetImg = document.querySelector('.preview__photo');
+const resetIcons = document.querySelectorAll('.reset__icon');    
 
 function previewCard(event, preview, text) {
     const valueInput = event.currentTarget.value;
@@ -47,8 +39,8 @@ function previewCard(event, preview, text) {
             }
         }
 
-valueInputName.addEventListener('keyup', function() {previewCard(event, valueName, 'Nombre Apellido')});
-valueInputJob.addEventListener('keyup', function() {previewCard(event, valueJob, 'Front-end Developer')});
+valueInputName.addEventListener('keyup', function(event) {previewCard(event, valueName, 'Nombre Apellido')});
+valueInputJob.addEventListener('keyup', function(event) {previewCard(event, valueJob, 'Front-end Developer')});
 valueInputTel.addEventListener('keyup', previewCardTel);
 valueInputEmail.addEventListener('keyup', previewCardEmail);
 valueInputLinkedin.addEventListener('keyup', previewCardLinkedin);
@@ -106,3 +98,34 @@ function previewCardGithub (event) {
         valueGithub.classList.remove('hidden');
     }
 }
+
+function hiddenIcon() {
+    for (const icon of resetIcons) {
+        icon.classList.add('hidden');
+    }
+}
+
+function hiddenFields(){
+    for(const field of resetFields){
+        field.innerHTML = "";
+    }
+}
+
+function resetButton() {
+    valueName.innerHTML = defaultValues.name;
+    valueJob.innerHTML = defaultValues.job;
+    valueTel.innerHTML = defaultValues.phone;
+    valueEmail.innerHTML = defaultValues.email;
+    valueGithub.innerHTML = defaultValues.github;
+    valueLinkedin.innerHTML = defaultValues.linkedin;
+    //photo. Error aquí tmbn 
+    profileImage.style.backgroundImage = `url(${defaultValues.photo})`;
+    profilePreview.style.backgroundImage = `url(${defaultValues.photo})`;
+    hiddenIcon();
+    hiddenFields();
+    paletteChange('paletteGreen');
+    //error aquí
+    //inputGreen.checked = 'checked';
+    } 
+    
+btnReset.addEventListener('click', resetButton); 

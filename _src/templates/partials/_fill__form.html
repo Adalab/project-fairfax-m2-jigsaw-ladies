@@ -24,7 +24,7 @@
             <div class="thumbnail__container">
                 <label for="avatar"></label>
                 <button class="action__upload-btn js__profile-trigger" type="button">Añadir imagen</button>
-                <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn" required>
+                <input type="file" name="photo" id="img-selector" class="action__hiddenField js__profile-upload-btn" required>
                     <div class="profile__preview js__profile-preview"></div>
             </div>
             
@@ -34,14 +34,13 @@
                 placeholder="Ej: sally-hill@gmail.com" required>
 
             <label class="label__fill" for="tel">Teléfono <span class="legend_plus">*</span></label>
-            <input class="input__fill  input__tel" type="tel" name="tel" id="tel" pattern="[0-9]" maxlength="9"
-                placeholder="Ej: 555-55-55-55" required>
+            <input class="input__fill  input__tel" type="tel" name="phone" id="tel" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{3}" maxlength="9" placeholder="Ej: 555 555 555">
 
        <label class="label__fill" for="linkedin">Linkedin</label>
-       <input class="input__fill input__linkedin ellipsis"  type="text" name="linkedin" id="linkedin" placeholder="Ej: sally.hill">
+       <input class="input__fill input__linkedin ellipsis"  type="text" name="linkedin" id="linkedin" placeholder="Ej: sally.hill" required>
 
        <label class="label__fill" for="github">Github</label>
-       <input class="input__fill input__github ellipsis"  type="text" name="github" id="github" placeholder="Ej: sally-hill">
+       <input class="input__fill input__github ellipsis"  type="text" name="github" id="github" placeholder="Ej: sally-hill" required>
 
         </div>
     </div>
