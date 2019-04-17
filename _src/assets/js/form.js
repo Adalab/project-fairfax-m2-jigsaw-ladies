@@ -35,7 +35,9 @@ const valueInputLinkedin = document.querySelector(".input__linkedin");
 // }
 
 // btn.addEventListener('click', resetInfo);
+
 const dataInfo = {
+    palette: '',
     name: '',
     job: '',
     phone: '',
@@ -48,6 +50,7 @@ function previewCard(event, preview, text, objectKey) {
     const valueInput = event.currentTarget.value;
     if (valueInput === "") {
         preview.innerHTML = text;
+        objStorage()
     } else {
         preview.innerHTML = valueInput;
         objStorage();
@@ -72,6 +75,7 @@ function previewCardTel(event) {
     if (value === "") {
         linkTel.href = "";
         valueTel.classList.add("hidden");
+        objStorage()
     } else {
         linkTel.href = `"tel:${value}"`;
         valueTel.classList.remove("hidden");
@@ -86,6 +90,7 @@ function previewCardEmail(event) {
     if (value === "") {
         linkEmail.href = "";
         valueEmail.classList.add("hidden");
+        objStorage()
     } else {
         linkEmail.href = `"mailto:${value}"`;
         valueEmail.classList.remove("hidden");
@@ -100,6 +105,7 @@ function previewCardLinkedin(event) {
     if (value === "") {
         linkLinkedin.href = "";
         valueLinkedin.classList.add("hidden");
+        objStorage()
     } else {
         linkLinkedin.href = `https://www.linkedin.com/in/${value}`;
         valueLinkedin.classList.remove("hidden");
@@ -114,6 +120,7 @@ function previewCardGithub(event) {
     if (value === "") {
         linkGithub.href = "";
         valueGithub.classList.add("hidden");
+        objStorage()
     } else {
         linkGithub.href = `https://github.com/${value}`;
         valueGithub.classList.remove("hidden");
