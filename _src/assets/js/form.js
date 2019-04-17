@@ -155,7 +155,7 @@ function getStorage() {
         valueName.innerHTML = savedData.name;
         valueJob.innerHTML = savedData.job;
         };
-        getPalette(savedData);
+        paquito(savedData);
         valueInputName.value = savedData.name;
         valueInputJob.value = savedData.job;
         valueInputTel.value = savedData.phone;
