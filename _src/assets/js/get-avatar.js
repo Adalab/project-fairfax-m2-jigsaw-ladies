@@ -16,7 +16,9 @@ const profilePreview = document.querySelector('.js__profile-preview');
  * @param {evento} e 
  */
 function getImage(e){
-  var myFile = e.currentTarget.files[0];
+  const myFile = e.currentTarget.files[0];
+  // const blob = new Blob([myFile]);
+  // const url = URL.createObjectURL(blob);
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 }
@@ -34,8 +36,8 @@ function writeImage() {
    //Empieza base64
   fr.onloadend = function() {
     profileImage.style.backgroundImage = `url(${fr.result})`;
-    if (js__profile-upload-btn) {
-      fr.readAsDataURL (js__profile-upload-btn);
+    if (fileField) {
+      fr.readAsDataURL (fileField);
     } else {
       profileImage.src = '';
     }
