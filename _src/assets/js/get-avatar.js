@@ -40,7 +40,7 @@ function writeImage() {
  * que está oculto
  */
 function fakeFileClick() {
- fileField.click(); 
+  fileField.click(); 
 }
 
 /**
