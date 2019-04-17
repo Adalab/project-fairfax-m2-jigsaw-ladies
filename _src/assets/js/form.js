@@ -111,7 +111,7 @@ function hiddenFields(){
     }
 }
 
-function testGithub() {
+function resetButton() {
     valueName.innerHTML = defaultValues.name;
     valueJob.innerHTML = defaultValues.job;
     valueTel.innerHTML = defaultValues.phone;
@@ -127,4 +127,4 @@ function testGithub() {
     //inputGreen.checked = 'checked';
     } 
     
-btnReset.addEventListener('click', testGithub); 
+btnReset.addEventListener('click', resetButton); 
