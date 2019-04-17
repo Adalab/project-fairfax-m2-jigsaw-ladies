@@ -135,6 +135,7 @@ function objStorage() {
     dataInfo.email = valueInputEmail.value;
     dataInfo.linkedin = valueInputLinkedin.value;
     dataInfo.github = valueInputGithub.value;
+    dataInfo.palette = colorValue;
     storage();
 }
 
@@ -146,11 +147,17 @@ function getStorage() {
     const savedData = JSON.parse(localStorage.getItem("dataInfo"));
     if (savedData === null) {
         storage();
-    } else {
-        valueInputName.value = savedData.name;
+    } else { 
+        if (savedData.name === '') {
+            valueName.innerHTML = defaultValues.name;
+            valueJob.innerHTML = defaultValues.job;
+        } else {
         valueName.innerHTML = savedData.name;
-        valueInputJob.value = savedData.job;
         valueJob.innerHTML = savedData.job;
+        };
+        getPalette(savedData);
+        valueInputName.value = savedData.name;
+        valueInputJob.value = savedData.job;
         valueInputTel.value = savedData.phone;
         linkTel.href = savedData.phone;
         valueInputEmail.value = savedData.email;
