@@ -23,23 +23,15 @@ inputGreen.addEventListener('click', function() {paletteChange('paletteGreen', e
 inputBlue.addEventListener('click', function() {paletteChange('paletteBlue', event)});
 
 
-function paquito(object) {
+function getPalette(object) {
     console.log(inputGreen);
 
-    // if (object.palette === "2") {
-        // inputGreen.removeAttribute('checked');
-        // inputBlue.removeAttribute('checked');
-        // inputRed.setAttribute('checked', true);
-        // fakeColorClick(inputRed);
-
-    } // else if (object.palette === "3") {
-    //     inputRed.removeAttribute('checked');
-    //     inputGreen.removeAttribute('checked');
-    //     inputBlue.setAttribute('checked', true);
-    // } else {
-    //     inputRed.removeAttribute('checked');
-    //     inputBlue.removeAttribute('checked');
-    //     inputGreen.setAttribute('checked', true);
-    // }
-    // };
+    if (object.palette === '2') {
+        fakeColorClick(inputRed);
+    }  else if (object.palette === '3') {
+        fakeColorClick(inputBlue);
+    } else {
+        fakeColorClick(inputGreen);
+    }
+     }
 

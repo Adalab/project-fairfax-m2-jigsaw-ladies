@@ -29,6 +29,9 @@ const valueInputEmail = document.querySelector(".input__email");
 const linkGithub = document.querySelector(".link__github");
 
 const valueInputLinkedin = document.querySelector(".input__linkedin");
+
+
+
 // function resetInfo() {
 //     /* Que los emptyValue se sustituyan, al pinchar el botón de reset, por los defaultValues */
 //     emptyValues.value = defaultValues.value;
@@ -155,7 +158,7 @@ function getStorage() {
         valueName.innerHTML = savedData.name;
         valueJob.innerHTML = savedData.job;
         };
-        paquito(savedData);
+        getPalette(savedData);
         valueInputName.value = savedData.name;
         valueInputJob.value = savedData.job;
         valueInputTel.value = savedData.phone;
