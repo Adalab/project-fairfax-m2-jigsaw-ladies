@@ -30,15 +30,6 @@ const linkGithub = document.querySelector('.link__github');
 
 const valueInputLinkedin = document.querySelector('.input__linkedin');
 
-
-
-// function resetInfo() {
-//     /* Que los emptyValue se sustituyan, al pinchar el botón de reset, por los defaultValues */
-//     emptyValues.value = defaultValues.value;
-// }
-
-// btn.addEventListener('click', resetInfo);
-
 const dataInfo = {
   palette: '',
   name: '',
@@ -150,7 +141,7 @@ function getStorage() {
   const savedData = JSON.parse(localStorage.getItem('dataInfo'));
   if (savedData === null) {
     storage();
-  } else { 
+  } else {
     if (savedData.name === '') {
       valueName.innerHTML = defaultValues.name;
       valueJob.innerHTML = defaultValues.job;
