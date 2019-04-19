@@ -1,11 +1,10 @@
 'use strict';
 
-const fr = new FileReader();
-const uploadBtn = document.querySelector('.js__profile-trigger');
-const fileField = document.querySelector('.js__profile-upload-btn');
-const profileImage = document.querySelector('.js__profile-image');
-const profilePreview = document.querySelector('.js__profile-preview');
-
+const fr = new FileReader ();
+const uploadBtn = document.querySelector ('.js__profile-trigger');
+const fileField = document.querySelector ('.js__profile-upload-btn');
+const profileImage = document.querySelector ('.js__profile-image');
+const profilePreview = document.querySelector ('.js__profile-preview');
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -15,23 +14,22 @@ const profilePreview = document.querySelector('.js__profile-preview');
  * al tener los datos listos
  * @param {evento} e 
  */
-function getImage(e){
+function getImage (e) {
   var myFile = e.currentTarget.files[0];
-  fr.addEventListener('load', writeImage);
-  fr.readAsDataURL(myFile);
+  fr.addEventListener ('load', writeImage);
+  fr.readAsDataURL (myFile);
 }
-
 
 /**
  * Una vez tenemos los datos listos en el FR podemos
  * trabajar con ellos ;)
  */
-function writeImage() {
+function writeImage () {
   /* En la propiedad `result` de nuestro FR se almacena
    * el resultado
    */
 
-   //Empieza base64
+  //Empieza base64
   // fr.onloadend = function() {
   //   profileImage.style.backgroundImage = `url(${fr.result})`;
   //   if (js__profile-upload-btn) {
@@ -40,19 +38,18 @@ function writeImage() {
   //     profileImage.src = '';
   //   }
   // }
-   //Termina base 64
-   profileImage.style.backgroundImage = `url(${fr.result})`;
-   profilePreview.style.backgroundImage = `url(${fr.result})`;
-   objStorage();
+  //Termina base 64
+  profileImage.style.backgroundImage = `url(${fr.result})`;
+  profilePreview.style.backgroundImage = `url(${fr.result})`;
+  objStorage ();
 }
-
 
 /**
  * Genera un click automático en nuesto campo de tipo "file"
  * que está oculto
  */
-function fakeFileClick() {
-  fileField.click(); 
+function fakeFileClick () {
+  fileField.click ();
 }
 
 /**
@@ -60,5 +57,5 @@ function fakeFileClick() {
  * - al botón visible para generar el click automático
  * - al campo oculto para cuando cambie su value
  */
-uploadBtn.addEventListener('click', fakeFileClick);
-fileField.addEventListener('change', getImage);
+uploadBtn.addEventListener ('click', fakeFileClick);
+fileField.addEventListener ('change', getImage);
