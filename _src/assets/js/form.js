@@ -1,34 +1,25 @@
 'use strict';
 
-const btn = document.querySelector('.btn__reset');
-const defaultValues = {
-  palette: 1,
-  name: 'Nombre Apellido',
-  job: 'Front-end Developer',
-  phone: +34666666666,
-  email: 'sally-hill@gmail.com',
-  linkedin: 'sally.hill',
-  github: 'sally-hill'
-  // TODO: add photos
-};
-
-const valueInputName = document.querySelector('.input__name');
-const valueName = document.querySelector('.preview__title');
-const valueJob = document.querySelector('.preview__subtitle');
-const valueTel = document.querySelector('.preview__tel');
+const valueInputName = document.querySelector(".input__name");
+const valueName = document.querySelector(".preview__title");
+const valueInputJob = document.querySelector(".input__job");
+const valueJob = document.querySelector(".preview__subtitle");
+const valueInputTel = document.querySelector(".input__tel");
+const valueTel = document.querySelector(".preview__tel");
 const linkTel = document.querySelector('.rs__tel');
-const valueEmail = document.querySelector('.preview__email');
-const linkEmail = document.querySelector('.rs__email');
-const valueLinkedin = document.querySelector('.preview__linkedin');
-const valueInputJob = document.querySelector('.input__job');
-const linkLinkedin = document.querySelector('.link__linkedin');
-const valueInputTel = document.querySelector('.input__tel');
-const valueInputGithub = document.querySelector('.input__github');
-const valueGithub = document.querySelector('.preview__github');
-const valueInputEmail = document.querySelector('.input__email');
-const linkGithub = document.querySelector('.link__github');
-
-const valueInputLinkedin = document.querySelector('.input__linkedin');
+const valueInputEmail = document.querySelector(".input__email");
+const valueEmail = document.querySelector(".preview__email");
+const linkEmail = document.querySelector(".rs__email");
+const valueInputLinkedin = document.querySelector(".input__linkedin");
+const valueLinkedin = document.querySelector (".preview__linkedin");
+const linkLinkedin = document.querySelector(".link__linkedin");
+const valueInputGithub = document.querySelector(".input__github");
+const valueGithub = document.querySelector (".preview__github");
+const linkGithub = document.querySelector(".link__github");
+const btnReset = document.querySelector('.btn__reset');
+const resetFields = document.querySelectorAll('.input__fill');
+const resetImg = document.querySelector('.preview__photo');
+const resetIcons = document.querySelectorAll('.reset__icon');    
 
 const dataInfo = {
   palette: '',
@@ -41,7 +32,18 @@ const dataInfo = {
   photo: ''
 };
 
-function previewCard(event, preview, text, objectKey) {
+const defaultValues = {
+  palette: 1,
+  name: 'Nombre Apellido',
+  job: 'Front-end Developer',
+  phone: '',
+  email: '',
+  linkedin: '',
+  github: '',
+  photo: 'https://via.placeholder.com/200x200/cccccc/666666/?text=IMAGE'
+};
+
+function previewCard(event, preview, text) {
   const valueInput = event.currentTarget.value;
   if (valueInput === '') {
     preview.innerHTML = text;
@@ -50,14 +52,10 @@ function previewCard(event, preview, text, objectKey) {
     preview.innerHTML = valueInput;
     objStorage();
   }
-}
+};
 
-valueInputName.addEventListener('keyup', function () {
-  previewCard(event, valueName, 'Nombre Apellido', 'name');
-});
-valueInputJob.addEventListener('keyup', function () {
-  previewCard(event, valueJob, 'Front-end Developer', 'job');
-});
+valueInputName.addEventListener('keyup', function(event) {previewCard(event, valueName, 'Nombre Apellido')});
+valueInputJob.addEventListener('keyup', function(event) {previewCard(event, valueJob, 'Front-end Developer')});
 valueInputTel.addEventListener('keyup', previewCardTel);
 valueInputEmail.addEventListener('keyup', previewCardEmail);
 valueInputLinkedin.addEventListener('keyup', previewCardLinkedin);
@@ -149,7 +147,7 @@ function getStorage() {
       valueJob.innerHTML = defaultValues.job;
     } else {
       valueName.innerHTML = savedData.name;
-      valueJob.innerHTML = savedData.jo
+      valueJob.innerHTML = savedData.job;
     }
     profileImage.style.backgroundImage = savedData.photo;
     profilePreview.style.backgroundImage = savedData.photo;
@@ -179,3 +177,32 @@ function printIcon(object, objectkey, preview) {
 }
 
 getStorage();
+
+function hiddenIcon() {
+    for (const icon of resetIcons) {
+        icon.classList.add('hidden');
+    }
+}
+
+function hiddenFields(){
+    for(const field of resetFields){
+        field.innerHTML = "";
+    }
+}
+
+function resetButton() {
+    valueName.innerHTML = defaultValues.name;
+    valueJob.innerHTML = defaultValues.job;
+    valueTel.innerHTML = defaultValues.phone;
+    valueEmail.innerHTML = defaultValues.email;
+    valueGithub.innerHTML = defaultValues.github;
+    valueLinkedin.innerHTML = defaultValues.linkedin;
+    //photo. Error aquí tmbn 
+    profileImage.style.backgroundImage = `url(${defaultValues.photo})`;
+    profilePreview.style.backgroundImage = `url(${defaultValues.photo})`;
+    hiddenIcon();
+    hiddenFields();
+    fakeColorClick(inputGreen);
+    } 
+    
+btnReset.addEventListener('click', resetButton); 
