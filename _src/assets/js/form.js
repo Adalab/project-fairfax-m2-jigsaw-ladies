@@ -37,7 +37,8 @@ const dataInfo = {
   phone: '',
   email: '',
   linkedin: '',
-  github: ''
+  github: '',
+  photo: ''
 };
 
 function previewCard(event, preview, text, objectKey) {
@@ -130,6 +131,7 @@ function objStorage() {
   dataInfo.linkedin = valueInputLinkedin.value;
   dataInfo.github = valueInputGithub.value;
   dataInfo.palette = colorValue;
+  dataInfo.photo = `url(${fr.result})`;
   storage();
 }
 
@@ -147,8 +149,11 @@ function getStorage() {
       valueJob.innerHTML = defaultValues.job;
     } else {
       valueName.innerHTML = savedData.name;
-      valueJob.innerHTML = savedData.job;
+      valueJob.innerHTML = savedData.jo
     }
+    profileImage.style.backgroundImage = savedData.photo;
+    profilePreview.style.backgroundImage = savedData.photo;
+    dataInfo.photo = savedData.photo;
     getPalette(savedData);
     valueInputName.value = savedData.name;
     valueInputJob.value = savedData.job;
