@@ -133,7 +133,7 @@ function objStorage () {
   dataInfo.linkedin = valueInputLinkedin.value;
   dataInfo.github = valueInputGithub.value;
   dataInfo.palette = colorValue;
-  dataInfo.photo = `url(${fr.result})`;
+  dataInfo.photo = photo.src;
   storage ();
 }
 
@@ -153,8 +153,9 @@ function getStorage () {
       valueName.innerHTML = savedData.name;
       valueJob.innerHTML = savedData.job;
     }
-    profileImage.style.backgroundImage = savedData.photo;
-    profilePreview.style.backgroundImage = savedData.photo;
+    profileImage.style.backgroundImage = `url(${savedData.photo}`;
+    profilePreview.style.backgroundImage = `url(${savedData.photo}`;
+    photo.src = savedData.photo;
     dataInfo.photo = savedData.photo;
     getPalette (savedData);
     valueInputName.value = savedData.name;
@@ -171,6 +172,7 @@ function getStorage () {
     printIcon (savedData, 'phone', valueTel);
     printIcon (savedData, 'linkedin', valueLinkedin);
     printIcon (savedData, 'github', valueGithub);
+    objStorage();
   }
 }
 
