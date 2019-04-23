@@ -162,6 +162,18 @@ fieldset {
         transform: rotate(0deg);
     }
 }
+
+.disabled__button{
+    background-color: lightgrey;
+    cursor: default;
+}
+
+.twitter__container {
+    max-width: rem(309);
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 /*Avatar*/
 .action {
     text-align: center;
