@@ -37,3 +37,15 @@ function showURL(result){
   urlContainer.classList.remove('hidden');
 }
 sendButton.addEventListener('click', waitForIt);
+
+// twttr.widgets.createShareButton(
+//   "https:\/\/dev.twitter.com\/web\/tweet-button",
+//   document.getElementById("tweet-container"),
+//   {
+//     size: "large",
+//     text: "custom share text",
+//     hashtags: "example,demo",
+//     via: "twitterdev",
+//     related: "twitterapi,twitter"
+//   }
+// );
