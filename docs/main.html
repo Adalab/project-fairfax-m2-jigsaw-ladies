@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Jigsaw Ladies</title>
-        <link rel="icon" href="#" />
+        <link rel="icon" href="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -112,13 +112,17 @@
 
                                     </label>
                                     <input class="input__fill  input__tel" type="tel" name="phone" id="tel"
-                                    pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{3}" maxlength="9" placeholder="Ej: 555 555 555">
-                                    <label class="label__fill" for="linkedin">Linkedin</label>
-                                    <input class="input__fill input__linkedin ellipsis" type="text"
-                                    name="linkedin" id="linkedin" placeholder="Ej: sally.hill" required>
-                                    <label class="label__fill" for="github">Github</label>
-                                    <input class="input__fill input__github ellipsis" type="text"
-                                    name="github" id="github" placeholder="Ej: sally-hill" required>
+                                    maxlength="15" placeholder="Ej: 555 555 555" required>
+                                    <label class="label__fill" for="linkedin">Linkedin <span class="legend_plus">*</span>
+
+                                    </label>
+                                    <input class="input__fill input__linkedin ellipsis" type="text" name="linkedin"
+                                    id="linkedin" placeholder="Ej: sally.hill" required>
+                                    <label class="label__fill" for="github">Github <span class="legend_plus">*</span>
+
+                                    </label>
+                                    <input class="input__fill input__github ellipsis" type="text" name="github"
+                                    id="github" placeholder="Ej: sally-hill" required>
                             </div>
         </div>
         </fieldset>
@@ -139,18 +143,17 @@
             </div>
         </fieldset>
         </form>
-        <div class="twitter__container">
+        <div class="twitter__container hidden">
              <h2 class="twitter__container--text">La tarjeta ha sido creada</h2>
- <a href="https://..." class="twitter__container--link">Soy un enlace</a>
+ <a href="" class="twitter__container--link"></a>
 
-            <button
-            class="twitter__container--btn"><i class="fab fa-twitter twitter__icon"></i> Compartir en twitter</button>
+            <button class="twitter__container--btn"><i class="fab fa-twitter twitter__icon"></i> Compartir en twitter</button>
         </div>
         </section>
         <section class="main__preview">
             <div class="preview__wrapper">
                 <div class="photo__container">
-                    <button class="btn__reset"><i class="reset__icon far fa-trash-alt"></i>Reset</button>
+                    <button class="btn__reset"><i class="trash__icon far fa-trash-alt"></i>Reset</button>
                     <div class="card__header">
                         <div class="side__bar"></div>
                         <div class="full__name">
@@ -167,22 +170,22 @@
                         </div>
                     </div>
                     <ul class="list__rs">
-                        <li class="preview__email hidden"> <a class="rs__element rs__email" href="mailto:">
+                        <li class="reset__list preview__email hidden"> <a class="rs__element rs__email" href="mailto:">
                     <i class="icon far fa-envelope"></i>
                 </a>
 
                         </li>
-                        <li class="preview__tel hidden"> <a class="rs__element rs__tel" href="tel:">
+                        <li class="reset__list preview__tel hidden"> <a class="rs__element rs__tel" href="tel:">
                     <i class="icon fas fa-mobile-alt"></i>
                 </a>
 
                         </li>
-                        <li class="preview__linkedin hidden"> <a class="rs__element link__linkedin" href="" target="_blank">
+                        <li class="reset__list preview__linkedin hidden"> <a class="rs__element link__linkedin" href="" target="_blank">
                     <i class="icon fab fa-linkedin-in"></i>
                 </a>
 
                         </li>
-                        <li class="preview__github hidden"> <a class="rs__element link__github" href="" target="_blank">
+                        <li class="reset__list preview__github hidden"> <a class="rs__element link__github" href="" target="_blank">
                     <i class="icon fab fa-github-alt"></i>
                 </a>
 
