@@ -74,7 +74,7 @@ function previewCardTel (event) {
     valueTel.classList.add ('hidden');
     objStorage ();
   } else {
-    linkTel.href = `'tel:${value}'`;
+    linkTel.href = `tel:${value}`;
     valueTel.classList.remove ('hidden');
     objStorage ();
   }
@@ -89,7 +89,7 @@ function previewCardEmail (event) {
     valueEmail.classList.add ('hidden');
     objStorage ();
   } else {
-    linkEmail.href = `'mailto:${value}'`;
+    linkEmail.href = `mailto:${value}`;
     valueEmail.classList.remove ('hidden');
     objStorage ();
   }
