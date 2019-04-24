@@ -19,7 +19,7 @@ const linkGithub = document.querySelector ('.link__github');
 const btnReset = document.querySelector ('.btn__reset');
 const resetFields = document.querySelectorAll ('.input__fill');
 const resetImg = document.querySelector ('.preview__photo');
-const resetIcons = document.querySelectorAll ('.reset__icon');
+const resetIcons = document.querySelectorAll ('.reset__list');
 
 const dataInfo = {
   palette: '',
@@ -198,16 +198,11 @@ function hiddenFields(){
 function resetButton() {
     valueName.innerHTML = defaultValues.name;
     valueJob.innerHTML = defaultValues.job;
-    valueTel.innerHTML = defaultValues.phone;
-    valueEmail.innerHTML = defaultValues.email;
-    valueGithub.innerHTML = defaultValues.github;
-    valueLinkedin.innerHTML = defaultValues.linkedin; 
     profileImage.style.backgroundImage = `url(${defaultValues.photo})`;
     profilePreview.style.backgroundImage = `url(${defaultValues.photo})`;
     hiddenIcon();
     hiddenFields();
-    paletteChange('paletteGreen');
-    inputGreen.checked = true;
+    fakeColorClick(inputGreen);
     } 
     
 getStorage ();
