@@ -29,17 +29,6 @@ function writeImage () {
   /* En la propiedad `result` de nuestro FR se almacena
    * el resultado
    */
-
-  //Empieza base64
-  // fr.onloadend = function() {
-  //   profileImage.style.backgroundImage = `url(${fr.result})`;
-  //   if (js__profile-upload-btn) {
-  //     fr.readAsDataURL (js__profile-upload-btn);
-  //   } else {
-  //     profileImage.src = '';
-  //   }
-  // }
-  //Termina base 64
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
   photo.src = fr.result;

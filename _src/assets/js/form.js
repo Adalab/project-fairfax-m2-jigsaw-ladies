@@ -182,33 +182,34 @@ function printIcon (object, objectkey, preview) {
   }
 }
 
-getStorage ();
-
 function hiddenIcon () {
-  for (const icon of resetIcons) {
-    icon.classList.add ('hidden');
+    for (const icon of resetIcons) {
+      icon.classList.add ('hidden');
+    }
   }
+
+  
+function hiddenFields(){
+    for(const field of resetFields){
+        field.value = "";
+    }
 }
 
-function hiddenFields () {
-  for (const field of resetFields) {
-    field.innerHTML = '';
-  }
-}
-
-function resetButton () {
-  valueName.innerHTML = defaultValues.name;
-  valueJob.innerHTML = defaultValues.job;
-  valueTel.innerHTML = defaultValues.phone;
-  valueEmail.innerHTML = defaultValues.email;
-  valueGithub.innerHTML = defaultValues.github;
-  valueLinkedin.innerHTML = defaultValues.linkedin;
-  //photo. Error aquí tmbn
-  profileImage.style.backgroundImage = `url(${defaultValues.photo})`;
-  profilePreview.style.backgroundImage = `url(${defaultValues.photo})`;
-  hiddenIcon ();
-  hiddenFields ();
-  fakeColorClick (inputGreen);
-}
+function resetButton() {
+    valueName.innerHTML = defaultValues.name;
+    valueJob.innerHTML = defaultValues.job;
+    valueTel.innerHTML = defaultValues.phone;
+    valueEmail.innerHTML = defaultValues.email;
+    valueGithub.innerHTML = defaultValues.github;
+    valueLinkedin.innerHTML = defaultValues.linkedin; 
+    profileImage.style.backgroundImage = `url(${defaultValues.photo})`;
+    profilePreview.style.backgroundImage = `url(${defaultValues.photo})`;
+    hiddenIcon();
+    hiddenFields();
+    paletteChange('paletteGreen');
+    inputGreen.checked = true;
+    } 
+    
+getStorage ();
 
 btnReset.addEventListener ('click', resetButton);

@@ -147,6 +147,7 @@ fieldset {
     margin: rem(30) 0;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
     border-style: none;
+    cursor: pointer;
 }
 
 .share__icon {
@@ -160,6 +161,18 @@ fieldset {
     .arrow__collapsible {
         transform: rotate(0deg);
     }
+}
+
+.disabled__button{
+    background-color: lightgrey;
+    cursor: default;
+}
+
+.twitter__container {
+    max-width: rem(309);
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /*Avatar*/
 .action {
