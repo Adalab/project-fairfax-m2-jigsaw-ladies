@@ -18,7 +18,6 @@ const valueGithub = document.querySelector ('.preview__github');
 const linkGithub = document.querySelector ('.link__github');
 const btnReset = document.querySelector ('.btn__reset');
 const resetFields = document.querySelectorAll ('.input__fill');
-const resetImg = document.querySelector ('.preview__photo');
 const resetIcons = document.querySelectorAll ('.reset__list');
 
 const dataInfo = {
@@ -134,25 +133,30 @@ function objStorage () {
   dataInfo.github = valueInputGithub.value;
   dataInfo.palette = colorValue;
   dataInfo.photo = photo.src;
-  storage ();
+  storage (dataInfo);
 }
 
-function storage () {
-  localStorage.setItem ('dataInfo', JSON.stringify (dataInfo));
+function storage (object) {
+  localStorage.setItem ('dataInfo', JSON.stringify (object));
 }
 
 function getStorage () {
   const savedData = JSON.parse (localStorage.getItem ('dataInfo'));
   if (savedData === null) {
-    storage ();
+    storage (defaultValues);
   } else {
     if (savedData.name === '') {
       valueName.innerHTML = defaultValues.name;
-      valueJob.innerHTML = defaultValues.job;
     } else {
       valueName.innerHTML = savedData.name;
+    }
+
+    if (savedData.job === '') {
+      valueJob.innerHTML = defaultValues.job;
+    } else {
       valueJob.innerHTML = savedData.job;
     }
+
     profileImage.style.backgroundImage = `url(${savedData.photo}`;
     profilePreview.style.backgroundImage = `url(${savedData.photo}`;
     photo.src = savedData.photo;
@@ -172,7 +176,7 @@ function getStorage () {
     printIcon (savedData, 'phone', valueTel);
     printIcon (savedData, 'linkedin', valueLinkedin);
     printIcon (savedData, 'github', valueGithub);
-    objStorage();
+    objStorage ();
   }
 }
 
@@ -183,28 +187,28 @@ function printIcon (object, objectkey, preview) {
 }
 
 function hiddenIcon () {
-    for (const icon of resetIcons) {
-      icon.classList.add ('hidden');
-    }
+  for (const icon of resetIcons) {
+    icon.classList.add ('hidden');
   }
-
-  
-function hiddenFields(){
-    for(const field of resetFields){
-        field.value = "";
-    }
 }
 
-function resetButton() {
-    valueName.innerHTML = defaultValues.name;
-    valueJob.innerHTML = defaultValues.job;
-    profileImage.style.backgroundImage = `url(${defaultValues.photo})`;
-    profilePreview.style.backgroundImage = `url(${defaultValues.photo})`;
-    hiddenIcon();
-    hiddenFields();
-    fakeColorClick(inputGreen);
-    } 
-    
+function hiddenFields () {
+  for (const field of resetFields) {
+    field.value = '';
+  }
+}
+
+function resetButton () {
+  valueName.innerHTML = defaultValues.name;
+  valueJob.innerHTML = defaultValues.job;
+  profileImage.style.backgroundImage = `url(${defaultValues.photo})`;
+  profilePreview.style.backgroundImage = `url(${defaultValues.photo})`;
+  hiddenIcon ();
+  hiddenFields ();
+  fakeColorClick (inputGreen);
+  localStorage.removeItem('dataInfo');
+}
+
 getStorage ();
 
 btnReset.addEventListener ('click', resetButton);
