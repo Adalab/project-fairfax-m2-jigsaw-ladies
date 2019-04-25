@@ -20,6 +20,8 @@ const btnReset = document.querySelector ('.btn__reset');
 const resetFields = document.querySelectorAll ('.input__fill');
 const resetImg = document.querySelector ('.preview__photo');
 const resetIcons = document.querySelectorAll ('.reset__list');
+const twitterContainer = document.querySelector ('.twitter__container');
+const shareButton = document.querySelector ('.share__button');
 
 const dataInfo = {
   palette: '',
@@ -203,6 +205,9 @@ function resetButton() {
     hiddenIcon();
     hiddenFields();
     fakeColorClick(inputGreen);
+    twitterContainer.classList.add('hidden');
+    shareButton.setAttribute('disabled', false);
+    shareButton.classList.remove('disabled__button');
     } 
     
 getStorage ();
