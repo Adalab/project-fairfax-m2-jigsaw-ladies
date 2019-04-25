@@ -1,14 +1,12 @@
 'use strict';
 
 const sendButton = document.querySelector ('.share__button');
-const form = document.querySelector ('form');
 const urlLink = document.querySelector ('.twitter__container--link');
 const urlContainer = document.querySelector ('.twitter__container');
 const twitterButton = document.querySelector ('.twitter__container--btn');
 const urlGenerated = document.querySelector ('.twitter__container--link');
 
 const tweetCard = () => {
-  console.log(urlGenerated.innerHTML);
   const url = 'https://twitter.com/intent/tweet';
   const text = `Esta es mi tarjeta digital creada por JigSaw Ladies. ${urlGenerated.href}`;
   const hashtag = 'JigSawCards,Adalab,Adalabers';

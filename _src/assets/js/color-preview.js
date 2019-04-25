@@ -7,7 +7,7 @@ const inputBlue = document.querySelector('#color3');
 let colorValue = 0;
 
 function fakeColorClick(input) {
-  input.click(); 
+  input.click();
 }
 
 function paletteChange(paletteSelected, event) {
@@ -23,7 +23,6 @@ function paletteChange(paletteSelected, event) {
 inputRed.addEventListener('click', function() {paletteChange('paletteRed', event)});
 inputGreen.addEventListener('click', function() {paletteChange('paletteGreen', event)});
 inputBlue.addEventListener('click', function() {paletteChange('paletteBlue', event)});
-
 
 // eslint-disable-next-line no-unused-vars
 function getPalette(object) {

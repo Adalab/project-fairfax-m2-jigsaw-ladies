@@ -208,20 +208,11 @@ function resetButton () {
   hiddenIcon ();
   hiddenFields ();
   fakeColorClick (inputGreen);
-  localStorage.removeItem ('dataInfo');
-}
-
-function resetButton () {
-  valueName.innerHTML = defaultValues.name;
-  valueJob.innerHTML = defaultValues.job;
-  profileImage.style.backgroundImage = `url(${defaultValues.photo})`;
-  profilePreview.style.backgroundImage = `url(${defaultValues.photo})`;
-  hiddenIcon ();
-  hiddenFields ();
-  fakeColorClick (inputGreen);
   twitterContainer.classList.add ('hidden');
   shareButton.setAttribute ('disabled', false);
   shareButton.classList.remove ('disabled__button');
+  localStorage.removeItem ('dataInfo');
+  photo.src = defaultValues.photo;
 }
 
 getStorage ();
