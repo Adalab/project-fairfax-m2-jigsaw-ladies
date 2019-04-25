@@ -11,7 +11,7 @@ const tweetCard = () => {
   console.log(urlGenerated.innerHTML);
   const url = 'https://twitter.com/intent/tweet';
   const text = `Esta es mi tarjeta digital creada por JigSaw Ladies. ${urlGenerated.href}`;
-  const hashtag = 'JigSawCard,Adalab,Adalabers';
+  const hashtag = 'JigSawCards,Adalab,Adalabers';
   window.open(`${url}?text=${text};hashtags=${hashtag}`);
 };
 
