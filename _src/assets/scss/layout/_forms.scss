@@ -17,7 +17,6 @@ fieldset {
     color: $color-secundary;
 }
 
-/*Design form*/
 .form__collapsible , .design__main__container {
     max-width: 90%;
     margin: 0 auto;
@@ -102,7 +101,6 @@ fieldset {
     margin-bottom: 20px;
 }
 
-/*Fill form*/
 .label__fill {
     @include Label---fillform;
 }
@@ -126,7 +124,6 @@ fieldset {
     text-overflow: ellipsis;
 }
 
-/*Share form*/
 .share__container {
     margin-bottom: rem(30);
 }
@@ -169,12 +166,11 @@ fieldset {
 }
 
 .twitter__container {
-    max-width: rem(309);
   white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/*Avatar*/
+
 .action {
     text-align: center;
     margin: 30px;
@@ -190,8 +186,6 @@ fieldset {
     width: 140px;
   }
   .action__hiddenField {
-    /* Ocultamos el input de tipo "file" porque no podemos 
-    darle los estilos que queremos */
     display: none;
   }
   
@@ -218,7 +212,6 @@ fieldset {
     margin-left: 15px;
   }
 
-/* Twitter share */
 .twitter__container {
     display: flex;
     flex-direction: column;
@@ -240,7 +233,12 @@ fieldset {
     font-family: $fontFamilyPrimary;
     font-size: rem(12);
     color: $color-secundary;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: rem(10);
+    max-width: rem(309);
+    display: block;
 }
 
 .twitter__container--btn {

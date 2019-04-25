@@ -23,13 +23,12 @@
         flex-grow: 1;
     }
 }
-
-
 .trash__icon {
     color: $color-grey; 
     font-size: rem(12);
     padding-right: rem(8);
 }
+
 .photo__container {
     max-width: rem(240);
     background: $color-white;

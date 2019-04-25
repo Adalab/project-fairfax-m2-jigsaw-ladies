@@ -11,7 +11,6 @@
         padding-bottom: rem(60);
     }
 }
-
 .landing__header {
     width: rem(250);
 
@@ -19,11 +18,9 @@
         width: rem(419);
     }
 }
-
 .landing__img {
     width: 100%;
 }
-
 .landing__title-container {
     max-width: rem(320);
     margin-top: rem(35);
@@ -46,7 +43,6 @@
         @include Landing---Main-text---tablet;
     }
 }
-
 .icons__list {
     display: flex;
     justify-content: space-around;
@@ -55,7 +51,6 @@
     margin: 0;
     width: 100%;
 }
-
 .landing__icons {
     border: 2px solid rgba($color: $color-secundary, $alpha: 0.21);
     width: rem(268);
@@ -91,8 +86,6 @@
     background-color: $color-tertiary;
     margin: 0 auto;
 }
-
-
 .landing__button--link {
     text-decoration: none;
     text-transform: uppercase;
