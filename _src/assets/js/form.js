@@ -28,7 +28,7 @@ const dataInfo = {
   email: '',
   linkedin: '',
   github: '',
-  photo: '',
+  photo: 'https://via.placeholder.com/200x200/cccccc/666666/?text=IMAGE',
 };
 
 const defaultValues = {
@@ -143,7 +143,7 @@ function storage (object) {
 function getStorage () {
   const savedData = JSON.parse (localStorage.getItem ('dataInfo'));
   if (savedData === null) {
-    storage (defaultValues);
+    storage (dataInfo);
   } else {
     if (savedData.name === '') {
       valueName.innerHTML = defaultValues.name;
