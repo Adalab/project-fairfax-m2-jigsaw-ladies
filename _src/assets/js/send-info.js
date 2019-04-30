@@ -13,14 +13,14 @@ const tweetCard = () => {
   window.open(`${url}?text=${text};hashtags=${hashtag}`);
 };
 
-function waitForIt () {
+const waitForIt = () => {
   event.preventDefault ();
   sendButton.classList.add ('disabled__button');
   sendButton.setAttribute ('disabled', true);
   sendRequest ();
-}
+};
 
-function sendRequest () {
+const sendRequest = () => {
   fetch ('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
     body: JSON.stringify (dataInfo),
@@ -28,24 +28,18 @@ function sendRequest () {
       'content-type': 'application/json',
     },
   })
-    .then (function (resp) {
-      return resp.json ();
-    })
-    .then (function (result) {
-      showURL (result);
-    })
-    .catch (function (error) {
-      console.log (error);
-    });
-}
+    .then (response => response.json())
+    .then (result => showURL (result))
+    .catch (error => console.log (error));
+};
 
-function showURL (result) {
+const showURL = result => {
   if (result.success) {
     urlLink.href = result.cardURL;
     urlLink.innerHTML = result.cardURL;
   }
   urlContainer.classList.remove ('hidden');
-}
+};
 
 twitterButton.addEventListener ('click', tweetCard);
 sendButton.addEventListener ('click', waitForIt);

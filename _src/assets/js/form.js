@@ -44,89 +44,78 @@ const defaultValues = {
   photo: 'https://via.placeholder.com/200x200/cccccc/666666/?text=IMAGE',
 };
 
-function previewCard (event, preview, text) {
+const previewCard = (event, preview, text) => {
   const valueInput = event.currentTarget.value;
   if (valueInput === '') {
     preview.innerHTML = text;
-    objStorage ();
+    objectStorage ();
   } else {
     preview.innerHTML = valueInput;
-    objStorage ();
+    objectStorage ();
   }
-}
+};
 
-valueInputName.addEventListener ('keyup', function (event) {
-  previewCard (event, valueName, 'Nombre Apellido');
-});
-valueInputJob.addEventListener ('keyup', function (event) {
-  previewCard (event, valueJob, 'Front-end Developer');
-});
-valueInputTel.addEventListener ('keyup', previewCardTel);
-valueInputEmail.addEventListener ('keyup', previewCardEmail);
-valueInputLinkedin.addEventListener ('keyup', previewCardLinkedin);
-valueInputGithub.addEventListener ('keyup', previewCardGithub);
 
-function previewCardTel (event) {
+const previewCardTel = event => {
   const trigger = event.currentTarget;
   const value = trigger.value;
 
   if (value === '') {
     linkTel.href = '';
     valueTel.classList.add ('hidden');
-    objStorage ();
+    objectStorage ();
   } else {
     linkTel.href = `tel:${value}`;
     valueTel.classList.remove ('hidden');
-    objStorage ();
+    objectStorage ();
   }
-}
+};
 
-function previewCardEmail (event) {
+const previewCardEmail = event => {
   const trigger = event.currentTarget;
   const value = trigger.value;
 
   if (value === '') {
     linkEmail.href = '';
     valueEmail.classList.add ('hidden');
-    objStorage ();
+    objectStorage ();
   } else {
     linkEmail.href = `mailto:${value}`;
     valueEmail.classList.remove ('hidden');
-    objStorage ();
+    objectStorage ();
   }
-}
+};
 
-function previewCardLinkedin (event) {
+const previewCardLinkedin = event => {
   const trigger = event.currentTarget;
   const value = trigger.value;
 
   if (value === '') {
     linkLinkedin.href = '';
     valueLinkedin.classList.add ('hidden');
-    objStorage ();
+    objectStorage ();
   } else {
     linkLinkedin.href = `https://www.linkedin.com/in/${value}`;
     valueLinkedin.classList.remove ('hidden');
-    objStorage ();
+    objectStorage ();
   }
-}
+};
 
-function previewCardGithub (event) {
+const previewCardGithub = event => {
   const trigger = event.currentTarget;
   const value = trigger.value;
-
   if (value === '') {
     linkGithub.href = '';
     valueGithub.classList.add ('hidden');
-    objStorage ();
+    objectStorage ();
   } else {
     linkGithub.href = `https://github.com/${value}`;
     valueGithub.classList.remove ('hidden');
-    objStorage ();
+    objectStorage ();
   }
-}
+};
 
-function objStorage () {
+const objectStorage = () => {
   dataInfo.name = valueInputName.value;
   dataInfo.job = valueInputJob.value;
   dataInfo.phone = valueInputTel.value;
@@ -136,13 +125,13 @@ function objStorage () {
   dataInfo.palette = colorValue;
   dataInfo.photo = photo.src;
   storage (dataInfo);
-}
+};
 
-function storage (object) {
+const storage = object => {
   localStorage.setItem ('dataInfo', JSON.stringify (object));
-}
+};
 
-function getStorage () {
+const getStorage = () => {
   const savedData = JSON.parse (localStorage.getItem ('dataInfo'));
   if (savedData === null) {
     storage (dataInfo);
@@ -178,43 +167,53 @@ function getStorage () {
     printIcon (savedData, 'phone', valueTel);
     printIcon (savedData, 'linkedin', valueLinkedin);
     printIcon (savedData, 'github', valueGithub);
-    objStorage ();
+    objectStorage ();
   }
-}
+};
 
-function printIcon (object, objectkey, preview) {
+const printIcon = (object, objectkey, preview) => {
   if (object[objectkey] !== '') {
     preview.classList.remove ('hidden');
   }
-}
+};
 
-function hiddenIcon () {
+const hideIcon = () => {
   for (const icon of resetIcons) {
     icon.classList.add ('hidden');
   }
-}
+};
 
-function hiddenFields () {
+const emptyFields = () => {
   for (const field of resetFields) {
     field.value = '';
   }
-}
+};
 
-function resetButton () {
+const resetButton = () => {
   valueName.innerHTML = defaultValues.name;
   valueJob.innerHTML = defaultValues.job;
   profileImage.style.backgroundImage = `url(${defaultValues.photo})`;
   profilePreview.style.backgroundImage = `url(${defaultValues.photo})`;
-  hiddenIcon ();
-  hiddenFields ();
+  hideIcon ();
+  emptyFields ();
   fakeColorClick (inputGreen);
   twitterContainer.classList.add ('hidden');
   shareButton.setAttribute ('disabled', false);
   shareButton.classList.remove ('disabled__button');
   localStorage.removeItem ('dataInfo');
   photo.src = defaultValues.photo;
-}
+};
 
 getStorage ();
 
 btnReset.addEventListener ('click', resetButton);
+valueInputTel.addEventListener ('keyup', previewCardTel);
+valueInputEmail.addEventListener ('keyup', previewCardEmail);
+valueInputLinkedin.addEventListener ('keyup', previewCardLinkedin);
+valueInputGithub.addEventListener ('keyup', previewCardGithub);
+valueInputName.addEventListener ('keyup', function (event) {
+  previewCard (event, valueName, 'Nombre Apellido');
+});
+valueInputJob.addEventListener ('keyup', function (event) {
+  previewCard (event, valueJob, 'Front-end Developer');
+});

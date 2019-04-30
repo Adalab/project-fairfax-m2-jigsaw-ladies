@@ -3,13 +3,15 @@
 const titleContainer = document.querySelectorAll('.design__title__container');
 const containerFull = document.querySelectorAll('.jscontainer');
 
-function closeCollapsible() {
+
+const closeCollapsible = () => {
   for (const collapse of containerFull) {
     collapse.classList.add('hidden__collapsible');
   }
-}
+};
 
-function collapseSection(event) {
+
+const collapseSection = event => {
   const trigger = event.currentTarget;
   const resultTrigger = trigger.parentElement.classList.contains('hidden__collapsible');
 
@@ -19,7 +21,7 @@ function collapseSection(event) {
   } else {
     trigger.parentElement.classList.add('hidden__collapsible');
   }
-}
+};
 
 for (const container of titleContainer){
   container.addEventListener('click', collapseSection);
